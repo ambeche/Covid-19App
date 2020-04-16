@@ -1,0 +1,12 @@
+stages:
+ - build
+
+build_project:
+ stage: build
+ script:
+ - xcodebuild clean -project Covid-19App.xcodeproj -scheme Covid-19App | xcpretty
+ - xcodebuild test -project  Covid-19App.xcodeproj -scheme Covid-19App -destination 'platform=iOS Simulator,name=iPhone 11 Max,OS=13.3' | xcpretty -s
+ tags:
+ - iOS
+ - test
+
