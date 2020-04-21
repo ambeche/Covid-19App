@@ -101,12 +101,11 @@
 		6A7B73EF244853680096EE52 /* Covid-19App */ = {
 			isa = PBXGroup;
 			children = (
+				F760BA90244EE51A009B3A7A /* Storyboards */,
 				6A7B73F0244853680096EE52 /* AppDelegate.swift */,
 				6A7B73F2244853680096EE52 /* SceneDelegate.swift */,
 				6A7B73F4244853680096EE52 /* ViewController.swift */,
-				6A7B73F6244853680096EE52 /* Main.storyboard */,
 				6A7B73FC244853690096EE52 /* Assets.xcassets */,
-				6A7B73FE244853690096EE52 /* LaunchScreen.storyboard */,
 				6A7B7401244853690096EE52 /* Info.plist */,
 				6A7B73F9244853680096EE52 /* Covid_19App.xcdatamodeld */,
 			);
@@ -129,6 +128,15 @@
 				6A7B7417244853690096EE52 /* Info.plist */,
 			);
 			path = "Covid-19AppUITests";
+			sourceTree = "<group>";
+		};
+		F760BA90244EE51A009B3A7A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6A7B73FE244853690096EE52 /* LaunchScreen.storyboard */,
+				6A7B73F6244853680096EE52 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
