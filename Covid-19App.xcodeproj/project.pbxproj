@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A69994424518BBF00F41D68 /* auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A69994324518BBF00F41D68 /* auth.storyboard */; };
 		6A7B73F1244853680096EE52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F0244853680096EE52 /* AppDelegate.swift */; };
 		6A7B73F3244853680096EE52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F2244853680096EE52 /* SceneDelegate.swift */; };
 		6A7B73F5244853680096EE52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F4244853680096EE52 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A69994324518BBF00F41D68 /* auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = auth.storyboard; sourceTree = "<group>"; };
 		6A7B73ED244853680096EE52 /* Covid-19App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7B73F0244853680096EE52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A7B73F2244853680096EE52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				6A7B73FE244853690096EE52 /* LaunchScreen.storyboard */,
 				6A7B73F6244853680096EE52 /* Main.storyboard */,
+				6A69994324518BBF00F41D68 /* auth.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A69994424518BBF00F41D68 /* auth.storyboard in Resources */,
 				6A7B7400244853690096EE52 /* LaunchScreen.storyboard in Resources */,
 				6A7B73FD244853690096EE52 /* Assets.xcassets in Resources */,
 				6A7B73F8244853680096EE52 /* Main.storyboard in Resources */,
