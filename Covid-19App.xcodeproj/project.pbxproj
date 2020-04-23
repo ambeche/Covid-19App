@@ -17,6 +17,7 @@
 		6A7B7400244853690096EE52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7B73FE244853690096EE52 /* LaunchScreen.storyboard */; };
 		6A7B740B244853690096EE52 /* Covid_19AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B740A244853690096EE52 /* Covid_19AppTests.swift */; };
 		6A7B7416244853690096EE52 /* Covid_19AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B7415244853690096EE52 /* Covid_19AppUITests.swift */; };
+		6AA55EC32451924B003585EA /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA55EC22451924B003585EA /* Statistics.storyboard */; };
 		F7E8678D2451905F002C09F8 /* CoronaNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E8678C2451905F002C09F8 /* CoronaNews.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		6A7B7411244853690096EE52 /* Covid-19AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Covid-19AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7B7415244853690096EE52 /* Covid_19AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_19AppUITests.swift; sourceTree = "<group>"; };
 		6A7B7417244853690096EE52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AA55EC22451924B003585EA /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		F7E8678C2451905F002C09F8 /* CoronaNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoronaNews.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 				6A7B73F6244853680096EE52 /* Main.storyboard */,
 				6A69994324518BBF00F41D68 /* auth.storyboard */,
 				F7E8678C2451905F002C09F8 /* CoronaNews.storyboard */,
+				6AA55EC22451924B003585EA /* Statistics.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				F7E8678D2451905F002C09F8 /* CoronaNews.storyboard in Resources */,
 				6A69994424518BBF00F41D68 /* auth.storyboard in Resources */,
 				6A7B7400244853690096EE52 /* LaunchScreen.storyboard in Resources */,
+				6AA55EC32451924B003585EA /* Statistics.storyboard in Resources */,
 				6A7B73FD244853690096EE52 /* Assets.xcassets in Resources */,
 				6A7B73F8244853680096EE52 /* Main.storyboard in Resources */,
 			);
