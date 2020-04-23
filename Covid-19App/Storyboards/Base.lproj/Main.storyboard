@@ -20,11 +20,22 @@
                         <segue destination="D0U-xM-44W" kind="relationship" relationship="viewControllers" id="RXr-rU-ddk"/>
                         <segue destination="JAn-rT-xFR" kind="relationship" relationship="viewControllers" id="NxU-fR-0tC"/>
                         <segue destination="zst-85-Jae" kind="relationship" relationship="viewControllers" id="T88-ua-6pX"/>
+                        <segue destination="W5A-Nh-p49" kind="relationship" relationship="viewControllers" id="YC9-aX-1od"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpu-Ea-xJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-413" y="-913"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="7yw-FF-4su">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Statistics" referencedIdentifier="Statistics" id="W5A-Nh-p49" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Statistics" id="Fw0-8q-r9Z"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejT-Q3-nNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="-1316"/>
         </scene>
         <!--authVC-->
         <scene sceneID="ec7-O4-rNS">
