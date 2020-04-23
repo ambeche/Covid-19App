@@ -17,6 +17,7 @@
 		6A7B7400244853690096EE52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7B73FE244853690096EE52 /* LaunchScreen.storyboard */; };
 		6A7B740B244853690096EE52 /* Covid_19AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B740A244853690096EE52 /* Covid_19AppTests.swift */; };
 		6A7B7416244853690096EE52 /* Covid_19AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B7415244853690096EE52 /* Covid_19AppUITests.swift */; };
+		F760BA92244EE85A009B3A7A /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F760BA91244EE85A009B3A7A /* News.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6A7B7411244853690096EE52 /* Covid-19AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Covid-19AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7B7415244853690096EE52 /* Covid_19AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_19AppUITests.swift; sourceTree = "<group>"; };
 		6A7B7417244853690096EE52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F760BA91244EE85A009B3A7A /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 				6A7B7400244853690096EE52 /* LaunchScreen.storyboard in Resources */,
 				6A7B73FD244853690096EE52 /* Assets.xcassets in Resources */,
 				6A7B73F8244853680096EE52 /* Main.storyboard in Resources */,
+				F760BA92244EE85A009B3A7A /* News.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
