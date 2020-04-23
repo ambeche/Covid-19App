@@ -137,7 +137,7 @@
 			children = (
 				6A7B73FE244853690096EE52 /* LaunchScreen.storyboard */,
 				6A7B73F6244853680096EE52 /* Main.storyboard */,
-				6A680EB6244F7B6B0072D761 /* Auth.storyboard */,
+				F760BA91244EE85A009B3A7A /* News.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
