@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Statistics-->
         <scene sceneID="jN1-yt-ryC">
             <objects>
                 <tableViewController storyboardIdentifier="Statistics" id="nn5-wV-OHi" sceneMemberID="viewController">
@@ -15,13 +15,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gEq-Dp-yMx">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatsTableViewCell" rowHeight="103" id="gEq-Dp-yMx" customClass="StatsTableViewCell" customModule="Covid_19App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gEq-Dp-yMx" id="C5W-w7-O1K">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fatalities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSp-o8-J4t">
+                                            <rect key="frame" x="138" y="46" width="108" height="49"/>
+                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEe-Hc-K5A">
+                                            <rect key="frame" x="12" y="46" width="106" height="49"/>
+                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="106" id="Fih-Ay-hvp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHa-Gw-Y3s">
+                                            <rect key="frame" x="264" y="46" width="138" height="49"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKM-gI-Kgc">
+                                            <rect key="frame" x="76" y="0.0" width="232" height="29"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="LZk-jC-2OY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kEe-Hc-K5A" firstAttribute="firstBaseline" secondItem="SSp-o8-J4t" secondAttribute="firstBaseline" id="3bF-h3-a26"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="VHa-Gw-Y3s" secondAttribute="trailing" constant="-8" id="BYD-Ou-mVu"/>
+                                        <constraint firstItem="kEe-Hc-K5A" firstAttribute="baseline" secondItem="SSp-o8-J4t" secondAttribute="baseline" id="MZo-t0-Ggc"/>
+                                        <constraint firstItem="WKM-gI-Kgc" firstAttribute="top" secondItem="C5W-w7-O1K" secondAttribute="topMargin" constant="-11" id="NzL-UA-UgO"/>
+                                        <constraint firstItem="SSp-o8-J4t" firstAttribute="baseline" secondItem="VHa-Gw-Y3s" secondAttribute="baseline" id="TJb-sR-rqK"/>
+                                        <constraint firstItem="SSp-o8-J4t" firstAttribute="leading" secondItem="kEe-Hc-K5A" secondAttribute="trailing" constant="20" id="YxM-tM-h48"/>
+                                        <constraint firstItem="VHa-Gw-Y3s" firstAttribute="leading" secondItem="SSp-o8-J4t" secondAttribute="trailing" constant="18" id="ceB-8y-1Nb"/>
+                                        <constraint firstItem="WKM-gI-Kgc" firstAttribute="centerX" secondItem="SSp-o8-J4t" secondAttribute="centerX" id="dbT-aP-Tev"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="kEe-Hc-K5A" secondAttribute="bottom" constant="-3" id="gyz-Hd-Xb5"/>
+                                        <constraint firstItem="kEe-Hc-K5A" firstAttribute="leading" secondItem="C5W-w7-O1K" secondAttribute="leadingMargin" constant="-8" id="hLD-5T-Lq4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="WKM-gI-Kgc" secondAttribute="trailing" constant="86" id="iQI-Q8-zd4"/>
+                                        <constraint firstItem="kEe-Hc-K5A" firstAttribute="top" secondItem="WKM-gI-Kgc" secondAttribute="bottom" constant="17" id="kgP-gH-SS7"/>
+                                        <constraint firstItem="SSp-o8-J4t" firstAttribute="firstBaseline" secondItem="VHa-Gw-Y3s" secondAttribute="firstBaseline" id="p4z-mj-Xe3"/>
+                                        <constraint firstItem="WKM-gI-Kgc" firstAttribute="leading" secondItem="C5W-w7-O1K" secondAttribute="leadingMargin" constant="56" id="sCc-sW-yV0"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countryName" destination="WKM-gI-Kgc" id="ZSs-dZ-6eT"/>
+                                    <outlet property="fatalities" destination="SSp-o8-J4t" id="VuX-lW-78K"/>
+                                    <outlet property="infected" destination="VHa-Gw-Y3s" id="wDB-zh-uzI"/>
+                                    <outlet property="recovered" destination="kEe-Hc-K5A" id="A7V-3b-Lee"/>
+                                    <segue destination="rby-M8-ikM" kind="show" identifier="ShowCountryDetails" id="WBY-Xf-CZX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,13 +88,42 @@
                             <outlet property="delegate" destination="nn5-wV-OHi" id="CtC-Zl-Y2o"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Statistics" id="YbV-gl-LOi"/>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dK7-wR-vDs"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="bolt.horizontal.icloud.fill" catalog="system" id="YbV-gl-LOi"/>
+                    <navigationItem key="navigationItem" title="Statistics" id="dK7-wR-vDs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3K-gQ-O43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="196"/>
+            <point key="canvasLocation" x="476.81159420289856" y="195.53571428571428"/>
+        </scene>
+        <!--CountryDetails-->
+        <scene sceneID="FYm-1A-czD">
+            <objects>
+                <tableViewController storyboardIdentifier="CountryDetails" title="CountryDetails" id="rby-M8-ikM" customClass="CountryDetailsTableViewController" customModule="Covid_19App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j5B-hG-u7B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryDetails" id="op9-xb-WnQ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="op9-xb-WnQ" id="s7a-PP-52V">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rby-M8-ikM" id="VAE-Me-FvC"/>
+                            <outlet property="delegate" destination="rby-M8-ikM" id="h7q-5E-yqn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="boM-84-Hbl"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qaV-0P-EWy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325" y="198"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BNF-Ak-7gn">
@@ -54,4 +142,7 @@
             <point key="canvasLocation" x="-441" y="195"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bolt.horizontal.icloud.fill" catalog="system" width="64" height="44"/>
+    </resources>
 </document>
