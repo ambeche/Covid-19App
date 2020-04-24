@@ -20,7 +20,6 @@ class NewsTableViewController: UITableViewController, NSFetchedResultsController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        newsNavBar.title = "Corona News"
         newsDF.mainScreen = self
         newsDF.url = self.urlToFetch
         newsDF.getNewsData()
