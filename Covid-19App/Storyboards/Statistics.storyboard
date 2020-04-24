@@ -1,27 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rXf-gF-Ehc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nn5-wV-OHi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Statistics-->
         <scene sceneID="jN1-yt-ryC">
             <objects>
-                <tableViewController storyboardIdentifier="Statistics" id="nn5-wV-OHi" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Statistics" title="Statistics" id="nn5-wV-OHi" customClass="StatisticsTableViewController" customModule="Covid_19App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xTv-0S-4JU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gEq-Dp-yMx">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatisticsTableViewCell" rowHeight="118" id="gEq-Dp-yMx" customClass="StatisticsTableViewCell" customModule="Covid_19App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gEq-Dp-yMx" id="C5W-w7-O1K">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fatalities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBy-oe-f70">
+                                            <rect key="frame" x="138" y="57" width="108" height="51"/>
+                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO6-rq-psd">
+                                            <rect key="frame" x="12" y="57" width="106" height="51"/>
+                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="106" id="h5h-m3-8bq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URA-N5-MOw">
+                                            <rect key="frame" x="264" y="57" width="138" height="51"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mht-7D-Km8">
+                                            <rect key="frame" x="76" y="11" width="232" height="29"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="H33-rV-otI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HO6-rq-psd" firstAttribute="firstBaseline" secondItem="YBy-oe-f70" secondAttribute="firstBaseline" id="13E-cA-wOg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="HO6-rq-psd" secondAttribute="bottom" constant="-1" id="A5z-Tg-NTn"/>
+                                        <constraint firstItem="YBy-oe-f70" firstAttribute="leading" secondItem="HO6-rq-psd" secondAttribute="trailing" constant="20" id="Cmj-L6-ufF"/>
+                                        <constraint firstItem="YBy-oe-f70" firstAttribute="baseline" secondItem="URA-N5-MOw" secondAttribute="baseline" id="DcK-17-5vq"/>
+                                        <constraint firstItem="mht-7D-Km8" firstAttribute="leading" secondItem="C5W-w7-O1K" secondAttribute="leadingMargin" constant="56" id="Fh2-Ty-GOO"/>
+                                        <constraint firstItem="HO6-rq-psd" firstAttribute="baseline" secondItem="YBy-oe-f70" secondAttribute="baseline" id="HT6-CW-kT1"/>
+                                        <constraint firstItem="HO6-rq-psd" firstAttribute="top" secondItem="mht-7D-Km8" secondAttribute="bottom" constant="17" id="MPT-hU-e3B"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="URA-N5-MOw" secondAttribute="trailing" constant="-8" id="baS-iy-GEQ"/>
+                                        <constraint firstItem="YBy-oe-f70" firstAttribute="firstBaseline" secondItem="URA-N5-MOw" secondAttribute="firstBaseline" id="dhE-gr-xKp"/>
+                                        <constraint firstItem="mht-7D-Km8" firstAttribute="top" secondItem="C5W-w7-O1K" secondAttribute="topMargin" id="g1G-gZ-MwN"/>
+                                        <constraint firstItem="mht-7D-Km8" firstAttribute="centerX" secondItem="YBy-oe-f70" secondAttribute="centerX" id="sGS-hB-dgT"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mht-7D-Km8" secondAttribute="trailing" constant="86" id="vqe-eH-c9W"/>
+                                        <constraint firstItem="URA-N5-MOw" firstAttribute="leading" secondItem="YBy-oe-f70" secondAttribute="trailing" constant="18" id="vsY-qe-bnv"/>
+                                        <constraint firstItem="HO6-rq-psd" firstAttribute="leading" secondItem="C5W-w7-O1K" secondAttribute="leadingMargin" constant="-8" id="y0a-n2-ITS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countryName" destination="mht-7D-Km8" id="e3o-Fv-17z"/>
+                                    <outlet property="fatalities" destination="YBy-oe-f70" id="dtR-yf-xdB"/>
+                                    <outlet property="infected" destination="URA-N5-MOw" id="kKE-hY-lfQ"/>
+                                    <outlet property="recovered" destination="HO6-rq-psd" id="UXG-k6-UzS"/>
+                                    <segue destination="kGY-ba-3UU" kind="show" id="bT7-Zk-ONZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,29 +88,45 @@
                             <outlet property="delegate" destination="nn5-wV-OHi" id="CtC-Zl-Y2o"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Statistics" id="YbV-gl-LOi"/>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dK7-wR-vDs"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="bolt.horizontal.icloud" catalog="system" id="YbV-gl-LOi"/>
+                    <navigationItem key="navigationItem" title="Statistics" id="dK7-wR-vDs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3K-gQ-O43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="196"/>
+            <point key="canvasLocation" x="-816" y="-264"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="BNF-Ak-7gn">
+        <!--CountryDetails-->
+        <scene sceneID="rrV-zr-yo9">
             <objects>
-                <navigationController id="rXf-gF-Ehc" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1MI-zF-rfo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="nn5-wV-OHi" kind="relationship" relationship="rootViewController" id="vox-eL-uhc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f6t-bt-XEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="CountryDetails" title="CountryDetails" id="kGY-ba-3UU" customClass="CountryDetailsTableViewController" customModule="Covid_19App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hJ4-vN-VG4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryDetailsTableViewCell" id="7OS-S0-XVA" customClass="StatisticsTableViewCell" customModule="Covid_19App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7OS-S0-XVA" id="nHg-K2-OV5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kGY-ba-3UU" id="bsa-Ix-YyS"/>
+                            <outlet property="delegate" destination="kGY-ba-3UU" id="mvj-cd-mLt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ala-23-fOf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ed-wS-Vfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-441" y="195"/>
+            <point key="canvasLocation" x="59" y="-265"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bolt.horizontal.icloud" catalog="system" width="64" height="44"/>
+    </resources>
 </document>
