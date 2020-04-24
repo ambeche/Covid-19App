@@ -1,28 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BG5-H9-1h5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zmp-oo-UKr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News-->
-        <scene sceneID="W3o-Sp-vu7">
+        <!--Corona News-->
+        <scene sceneID="UfW-Wx-dMn">
             <objects>
-                <viewController storyboardIdentifier="newsVC" id="BG5-H9-1h5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u3v-gW-kMV">
+                <tableViewController storyboardIdentifier="newsVC" id="5hJ-wZ-bh3" customClass="NewsTableViewController" customModule="Covid_19App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bt2-P8-Dj0" userLabel="News Table View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="wqz-wk-LyA"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="News" id="J1o-IN-vQm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" rowHeight="165" id="QaZ-vW-z19" customClass="NewsTableViewCell" customModule="Covid_19App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QaZ-vW-z19" id="hNs-iH-SEl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-US-mpT">
+                                            <rect key="frame" x="28" y="11" width="358" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="LU4-CS-RZx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="news Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz4-7a-xyV">
+                                            <rect key="frame" x="28" y="56" width="358" height="98"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dz4-7a-xyV" secondAttribute="bottom" id="SYm-EW-Axm"/>
+                                        <constraint firstItem="Sb1-US-mpT" firstAttribute="leading" secondItem="hNs-iH-SEl" secondAttribute="leadingMargin" constant="8" id="bUo-nY-ax8"/>
+                                        <constraint firstItem="dz4-7a-xyV" firstAttribute="top" secondItem="Sb1-US-mpT" secondAttribute="bottom" id="ldi-8j-Cck"/>
+                                        <constraint firstItem="Sb1-US-mpT" firstAttribute="top" secondItem="hNs-iH-SEl" secondAttribute="topMargin" id="rjl-Bd-7ZS"/>
+                                        <constraint firstItem="dz4-7a-xyV" firstAttribute="leading" secondItem="hNs-iH-SEl" secondAttribute="leadingMargin" constant="8" id="sQ3-Sf-tfA"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Sb1-US-mpT" secondAttribute="trailing" constant="8" id="vjo-fC-0iX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dz4-7a-xyV" secondAttribute="trailing" constant="8" id="w7y-RZ-Iqo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsDescription" destination="dz4-7a-xyV" id="Y5H-dh-lI2"/>
+                                    <outlet property="newsTitle" destination="Sb1-US-mpT" id="izh-Ge-Eng"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5hJ-wZ-bh3" id="a71-CS-nOh"/>
+                            <outlet property="delegate" destination="5hJ-wZ-bh3" id="6Jt-Gx-QyJ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="News" image="book" catalog="system" id="6iD-PZ-o6s"/>
+                    <navigationItem key="navigationItem" title="Corona News" id="xiW-Pp-JoD">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="veW-2I-caF" userLabel="Referesh"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ExJ-uz-cyl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="newsNavBar" destination="xiW-Pp-JoD" id="PdZ-no-15z"/>
+                        <outlet property="newsTableView" destination="Bt2-P8-Dj0" id="0z3-U7-e0I"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmD-mh-Sse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="45"/>
+            <point key="canvasLocation" x="3121.739130434783" y="12.723214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fLJ-h1-lsa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zmp-oo-UKr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ehr-EE-Lzm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5hJ-wZ-bh3" kind="relationship" relationship="rootViewController" id="jUR-8e-uzO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZ6-XZ-d7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2211.594202898551" y="12.723214285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="101"/>
+    </resources>
 </document>
