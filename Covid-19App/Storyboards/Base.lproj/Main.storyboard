@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zkd-QC-ygB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zkd-QC-ygB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                     <connections>
                         <segue destination="JAn-rT-xFR" kind="relationship" relationship="viewControllers" id="NxU-fR-0tC"/>
                         <segue destination="zst-85-Jae" kind="relationship" relationship="viewControllers" id="T88-ua-6pX"/>
-                        <segue destination="W5A-Nh-p49" kind="relationship" relationship="viewControllers" id="YC9-aX-1od"/>
+                        <segue destination="Iw8-Ei-DL8" kind="relationship" relationship="viewControllers" id="YC9-aX-1od"/>
                         <segue destination="ysn-j8-lR4" kind="relationship" relationship="viewControllers" id="nkH-Qa-YaJ"/>
                     </connections>
                 </tabBarController>
@@ -31,11 +31,11 @@
         <scene sceneID="7yw-FF-4su">
             <objects>
                 <viewControllerPlaceholder storyboardName="Statistics" referencedIdentifier="Statistics" id="W5A-Nh-p49" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Statistics" id="Fw0-8q-r9Z"/>
+                    <navigationItem key="navigationItem" id="IGU-jO-Ux8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejT-Q3-nNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="-1343"/>
+            <point key="canvasLocation" x="1279.7101449275362" y="-1343.3035714285713"/>
         </scene>
         <!--authVC-->
         <scene sceneID="ec7-O4-rNS">
@@ -90,10 +90,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXZ-KE-cRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="-1392"/>
+            <point key="canvasLocation" x="1737.68115942029" y="-1392.1875"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="zfz-Ha-Ex8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iw8-Ei-DL8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Statistics" id="Fw0-8q-r9Z"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fst-bI-tRe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W5A-Nh-p49" kind="relationship" relationship="rootViewController" id="DDU-od-PY3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hst-MO-pzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369.56521739130437" y="-1343.3035714285713"/>
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="book" catalog="system" width="64" height="50"/>
     </resources>
 </document>
