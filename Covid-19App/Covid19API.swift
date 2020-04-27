@@ -7,8 +7,10 @@
 //
 
 import Foundation
+
 class Covid19APPI {
     private var _url: URL?
+    var covid19APIDelegate: Covid19APIDelegate?
     
     var url: String {
         set {
@@ -21,8 +23,8 @@ class Covid19APPI {
     
     func fetchStatistics () {
 
-        let dataTask = URLSession.shared.dataTask(with: _url!) {
-            data, response, error in if let error = error {
+        let dataTask = URLSession.shared.dataTask(with: _url!) {data, response, error in
+            if let error = error {
                 print(error)
             }
             
@@ -33,10 +35,13 @@ class Covid19APPI {
             guard let data = data else {
                 return
             }
-            //print(data)
+        
             do {
-                let newsInfo = try JSONDecoder().decode(NewsDataStruct.self, from:data)
-                //print ("",.status)
+                let covid19Data = try JSONDecoder().decode(Covid19Data.self, from:data)
+                print ("count \(covid19Data.data.count)")
+                print (" names: \(covid19Data.data[0].name)")
+                
+                self.covid19APIDelegate?.fetchedData(covid19Data)
                 
             } catch let err {
                 print("Error message", err)
@@ -44,4 +49,8 @@ class Covid19APPI {
         }
             dataTask.resume()
     }
+}
+
+protocol Covid19APIDelegate {
+    func fetchedData (_ covid19Data: Covid19Data)
 }
