@@ -99,6 +99,7 @@ class NewsTableViewController: UITableViewController, NSFetchedResultsController
         // Configure the cell...
         cell.newsTitle.text = newsItem.title
         cell.newsDescription.text = newsItem.desc
+        cell.setImage(from: newsItem.urlIm ?? "no image selected")
         return cell
     }
     
@@ -138,14 +139,25 @@ class NewsTableViewController: UITableViewController, NSFetchedResultsController
     }
     */
 
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "fromNewsCellToWebView") {
+            guard let newsWebViewController = segue.destination as? WebViewController else {
+               fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedNewsCell = sender as? NewsTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedNewsCell) else {
+                fatalError("The selected cell is not bieng displayed by the table")
+            }
+            
+            guard let newsItem = self.fetchedResultsController?.object(at: indexPath) else {
+                       fatalError("news item not found from fetched results controller")
+                   }
+            newsWebViewController.urlToLoad = newsItem.url
+        }
     }
-    */
-
 }

@@ -29,6 +29,7 @@
 		F70D74722452BA8A006B7008 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D74712452BA8A006B7008 /* NewsTableViewCell.swift */; };
 		F70D74752452BCA1006B7008 /* NewsArticle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D74732452BCA1006B7008 /* NewsArticle+CoreDataClass.swift */; };
 		F70D74762452BCA1006B7008 /* NewsArticle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D74742452BCA1006B7008 /* NewsArticle+CoreDataProperties.swift */; };
+		F77A2A072456F4DF00280660 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A2A062456F4DF00280660 /* webViewController.swift */; };
 		F7E8678D2451905F002C09F8 /* CoronaNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E8678C2451905F002C09F8 /* CoronaNews.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		F70D74712452BA8A006B7008 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		F70D74732452BCA1006B7008 /* NewsArticle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsArticle+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F70D74742452BCA1006B7008 /* NewsArticle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsArticle+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F77A2A062456F4DF00280660 /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		F7E8678C2451905F002C09F8 /* CoronaNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoronaNews.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 				6A7B73F4244853680096EE52 /* ViewController.swift */,
 				F70D746B2452B967006B7008 /* NewsTableViewController.swift */,
 				F70D74712452BA8A006B7008 /* NewsTableViewCell.swift */,
+				F77A2A062456F4DF00280660 /* webViewController.swift */,
 				F70D746D2452B9C3006B7008 /* NewsDataFetcher.swift */,
 				F70D746F2452BA1B006B7008 /* NewsData.swift */,
 				F70D74732452BCA1006B7008 /* NewsArticle+CoreDataClass.swift */,
@@ -319,6 +322,7 @@
 				6AA55ECD2452EBCC003585EA /* StatisticsTableViewController.swift in Sources */,
 				6A7B73F1244853680096EE52 /* AppDelegate.swift in Sources */,
 				F70D74722452BA8A006B7008 /* NewsTableViewCell.swift in Sources */,
+				F77A2A072456F4DF00280660 /* webViewController.swift in Sources */,
 				6AA55ED12452EDA3003585EA /* StatisticsTableViewCell.swift in Sources */,
 				6AA55ED32452FA3F003585EA /* Covid19API.swift in Sources */,
 				6A7B73F3244853680096EE52 /* SceneDelegate.swift in Sources */,
