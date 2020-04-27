@@ -36,7 +36,7 @@ class Covid19APPI {
             //print(data)
             do {
                 let newsInfo = try JSONDecoder().decode(NewsDataStruct.self, from:data)
-                //print ("",.status)
+                print ("newsDataStatus", newsInfo.status)
                 
             } catch let err {
                 print("Error message", err)
