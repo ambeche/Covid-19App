@@ -12,15 +12,9 @@ struct Covid19Data: Codable {
     
     var data: [Country]
     
-    var globalDeaths: Int {
+    var globalDeaths: Int{
         data.reduce(0){ agg,e in
             agg + e.latest_data.deaths
-        }
-    }
-    
-    var globalConfirmed: Int {
-        data.reduce(0){ agg,e in
-            agg + e.latest_data.confirmed
         }
     }
     
@@ -30,6 +24,11 @@ struct Covid19Data: Codable {
         }
     }
     
+    var globalConfirmed: Int {
+           data.reduce(0){ agg,e in
+               agg + e.latest_data.confirmed
+           }
+       }
     var globalCritical: Int {
         data.reduce(0){ agg,e in
             agg + (e.latest_data.critical ?? 0)

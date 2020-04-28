@@ -13,6 +13,15 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
     }
     
+    @IBOutlet weak var gRecoverd: UILabel!
+    
+    @IBOutlet weak var gDeaths: UILabel!
+    
+    @IBOutlet weak var gConfirmed: UILabel!
+    
+    @IBOutlet weak var gCritical: UILabel!
+    
+    
     let apiUrl = "https://corona-api.com/countries"
     var covid19Fetcher = Covid19APPI()
     private var covidStatistics = [Country]()
@@ -27,7 +36,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         //self.clearsSelectionOnViewWillAppear = false
+         self.clearsSelectionOnViewWillAppear = false
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         covid19Fetcher.url = apiUrl
@@ -149,6 +158,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
             self.covidStatistics = covid19Data.data
             self.isloading = false
             self.tableView.reloadData()
+            print("\(covid19Data.globalCritical )")
         }
     }
 }
