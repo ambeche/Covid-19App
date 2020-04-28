@@ -74,12 +74,26 @@ struct LatestData: Codable {
     var confirmed: Int
     var recovered: Int
     var critical: Int?
+    var calculated: Calculated
     
     private enum Codingkeys: String, CodingKey {
         case deaths
         case confirmed
         case recovery
         case critical
+    }
+ 
+}
+
+struct Calculated: Codable {
+    var death_rate:Double?
+    var recovery_rate: Double?
+   
+    
+    private enum Codingkeys: String, CodingKey {
+        case death_rate = "deathRate"
+        case recovery = "recoveryRate"
+        
     }
  
 }

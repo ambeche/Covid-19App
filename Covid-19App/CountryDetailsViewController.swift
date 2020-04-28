@@ -22,6 +22,15 @@ class CountryDetailsViewController: UIViewController {
     
     @IBOutlet weak var confirmed: UILabel!
     
+    @IBOutlet weak var todayDeaths: UILabel!
+    
+    @IBOutlet weak var todayConfirmed: UILabel!
+    
+    @IBOutlet weak var recoveryRate: UILabel!
+    @IBOutlet weak var deathRate: UILabel!
+    
+    @IBOutlet weak var lastUpdated: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +52,11 @@ class CountryDetailsViewController: UIViewController {
         recovered.text = "\(stats.latest_data.recovered)"
         deaths.text = "\(stats.latest_data.deaths)"
         confirmed.text = "\(stats.latest_data.confirmed)"
+        todayDeaths.text = "\(stats.today.deaths)"
+        todayConfirmed.text = "\(stats.today.confirmed)"
+        deathRate.text = "\(stats.latest_data.calculated.death_rate ?? 0.0)"
+        recoveryRate.text = "\(stats.latest_data.calculated.recovery_rate ?? 0.0)"
+        lastUpdated.text = "Last Updated :\(stats.updated_at)"
       }
     }
     
