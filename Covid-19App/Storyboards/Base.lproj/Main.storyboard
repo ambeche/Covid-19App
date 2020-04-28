@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zkd-QC-ygB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zkd-QC-ygB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,10 +17,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="JAn-rT-xFR" kind="relationship" relationship="viewControllers" id="NxU-fR-0tC"/>
-                        <segue destination="zst-85-Jae" kind="relationship" relationship="viewControllers" id="T88-ua-6pX"/>
                         <segue destination="Iw8-Ei-DL8" kind="relationship" relationship="viewControllers" id="YC9-aX-1od"/>
                         <segue destination="ysn-j8-lR4" kind="relationship" relationship="viewControllers" id="nkH-Qa-YaJ"/>
+                        <segue destination="6uM-Ao-Kjd" kind="relationship" relationship="viewControllers" id="Bhp-gd-tEE"/>
+                        <segue destination="WXk-Oi-eCf" kind="relationship" relationship="viewControllers" id="AwQ-2Z-dCt"/>
+                        <segue destination="zst-85-Jae" kind="relationship" relationship="viewControllers" id="T88-ua-6pX"/>
+                        <segue destination="JAn-rT-xFR" kind="relationship" relationship="viewControllers" id="NxU-fR-0tC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpu-Ea-xJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP7-eC-74K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="-726"/>
+            <point key="canvasLocation" x="942" y="-496"/>
         </scene>
         <!--News-->
         <scene sceneID="MZI-mA-bYW">
@@ -92,6 +94,16 @@
             </objects>
             <point key="canvasLocation" x="1737.68115942029" y="-1392.1875"/>
         </scene>
+        <!--profileVC-->
+        <scene sceneID="bwO-Ca-88m">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="profileVC" id="Wii-jp-Xyd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ms4-fo-zZh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cm-re-auf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3610.144927536232" y="-925.44642857142856"/>
+        </scene>
         <!--Statistics-->
         <scene sceneID="zfz-Ha-Ex8">
             <objects>
@@ -109,10 +121,60 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hst-MO-pzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="369.56521739130437" y="-1343.3035714285713"/>
+            <point key="canvasLocation" x="720" y="-1780"/>
+        </scene>
+        <!--homeVC-->
+        <scene sceneID="z6s-Fc-8Jq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeTab" referencedIdentifier="homeVC" id="H6g-hF-ezn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="E2q-o4-djx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36F-k9-AUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2884.7826086956525" y="-739.28571428571422"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="gSy-kJ-nKa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WXk-Oi-eCf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="NZz-HY-iEh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rRN-CI-VL9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wii-jp-Xyd" kind="relationship" relationship="rootViewController" id="PXN-kc-mTI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RR3-Tq-4bV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608.6956521739135" y="-925.44642857142856"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="1ps-np-4F3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6uM-Ao-Kjd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="9qb-Kp-mcT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="46N-fG-raD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H6g-hF-ezn" kind="relationship" relationship="rootViewController" id="k4i-qV-tDC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9m-RY-YNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975.36231884058" y="-739.28571428571422"/>
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="person" catalog="system" width="128" height="117"/>
     </resources>
 </document>
