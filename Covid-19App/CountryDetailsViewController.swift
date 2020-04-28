@@ -56,7 +56,7 @@ class CountryDetailsViewController: UIViewController {
         todayConfirmed.text = "\(stats.today.confirmed)"
         deathRate.text = "\(stats.latest_data.calculated.death_rate ?? 0.0)"
         recoveryRate.text = "\(stats.latest_data.calculated.recovery_rate ?? 0.0)"
-        lastUpdated.text = "Last Updated :\(stats.updated_at)"
+        lastUpdated.text = "Last Updated \(stats.updated_at)"
       }
     }
     

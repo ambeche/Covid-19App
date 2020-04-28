@@ -13,7 +13,6 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
     }
     
-    
     let apiUrl = "https://corona-api.com/countries"
     var covid19Fetcher = Covid19APPI()
     private var covidStatistics = [Country]()
