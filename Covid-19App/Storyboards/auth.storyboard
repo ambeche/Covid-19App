@@ -10,7 +10,7 @@
         <!--Login-->
         <scene sceneID="gDE-40-17b">
             <objects>
-                <viewController storyboardIdentifier="authVC" id="rAf-sz-z8X" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="authVC" id="rAf-sz-z8X" customClass="LoginViewController" customModule="Covid_19App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5UW-GC-MGn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,6 +20,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailEditingDidEnd:" destination="rAf-sz-z8X" eventType="editingDidEnd" id="lrr-ry-5fW"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in with your COVID-19 ID. No account yet? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2F9-ew-jut">
                                 <rect key="frame" x="96" y="218" width="232" height="71"/>
@@ -70,6 +73,9 @@
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" red="1" green="0.99607843139999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="rAf-sz-z8X" eventType="touchUpInside" id="FdU-HR-4HI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBJ-nz-xAL">
                                 <rect key="frame" x="20" y="342" width="115" height="39"/>
@@ -84,6 +90,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="passwordEditingDidEnd:" destination="rAf-sz-z8X" eventType="editingDidEnd" id="Wgw-FF-kAE"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -91,8 +100,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Login" id="4MX-u8-wkT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="LF6-62-HPg" id="fq7-2x-emA"/>
+                        <outlet property="passwordTextField" destination="AhO-tA-KwW" id="BCX-y8-mNa"/>
+                        <segue destination="obd-kS-8jC" kind="unwind" identifier="BackToProfileScreen" unwindAction="unwindToProfileScreenWithUnwindSegue:" id="eGc-PD-QGS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpF-Hh-FoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="obd-kS-8jC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="85.507246376811594" y="68.973214285714278"/>
         </scene>
