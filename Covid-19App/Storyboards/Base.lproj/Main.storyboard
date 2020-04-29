@@ -23,6 +23,7 @@
                         <segue destination="WXk-Oi-eCf" kind="relationship" relationship="viewControllers" id="AwQ-2Z-dCt"/>
                         <segue destination="zst-85-Jae" kind="relationship" relationship="viewControllers" id="T88-ua-6pX"/>
                         <segue destination="JAn-rT-xFR" kind="relationship" relationship="viewControllers" id="NxU-fR-0tC"/>
+                        <segue destination="wfV-un-hoM" kind="relationship" relationship="viewControllers" id="t6d-UH-qz5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpu-Ea-xJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -59,6 +60,16 @@
             </objects>
             <point key="canvasLocation" x="1431.1594202898552" y="-1257.5892857142856"/>
         </scene>
+        <!--symptomsVC-->
+        <scene sceneID="3Om-rk-Jm7">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="symptomsVC" storyboardName="Symptoms" referencedIdentifier="symptomsVC" id="Ct4-LB-Vcc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZCH-LX-4W4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2W7-JN-mVv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.57971014492762" y="-359.59821428571428"/>
+        </scene>
         <!--Test-->
         <scene sceneID="cpc-UG-buE">
             <objects>
@@ -73,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP7-eC-74K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="-496"/>
+            <point key="canvasLocation" x="1850.7246376811595" y="-496.20535714285711"/>
         </scene>
         <!--News-->
         <scene sceneID="MZI-mA-bYW">
@@ -170,6 +181,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9m-RY-YNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1975.36231884058" y="-739.28571428571422"/>
+        </scene>
+        <!--Symptoms-->
+        <scene sceneID="BBm-IJ-wwF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wfV-un-hoM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Symptoms" id="V8e-9v-PCy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hFW-WH-ndp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ct4-LB-Vcc" kind="relationship" relationship="rootViewController" id="gQl-6G-X6e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQH-8J-0XV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="-106"/>
         </scene>
     </scenes>
     <resources>
