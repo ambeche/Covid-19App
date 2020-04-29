@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3x-6e-xyw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5hJ-wZ-bh3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,32 +16,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" id="QaZ-vW-z19" customClass="NewsTableViewCell" customModule="Covid_19App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="288.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" rowHeight="370" id="QaZ-vW-z19" customClass="NewsTableViewCell" customModule="Covid_19App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="370"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QaZ-vW-z19" id="hNs-iH-SEl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="288.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-US-mpT">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-US-mpT">
                                             <rect key="frame" x="28" y="11" width="358" height="45"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="LU4-CS-RZx"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="news Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz4-7a-xyV">
-                                            <rect key="frame" x="28" y="266" width="358" height="17.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="28" y="266" width="358" height="98"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="98" id="nur-jB-mMf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-kK-q4u">
                                             <rect key="frame" x="28" y="61" width="358" height="200"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="200" id="5Gw-nq-wJU"/>
+                                                <constraint firstAttribute="height" constant="200" id="5Gw-nq-wJU" userLabel="height = 123"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -49,11 +52,11 @@
                                         <constraint firstItem="gcf-kK-q4u" firstAttribute="top" secondItem="Sb1-US-mpT" secondAttribute="bottom" constant="5" id="70d-Z0-Jpn"/>
                                         <constraint firstItem="dz4-7a-xyV" firstAttribute="top" secondItem="gcf-kK-q4u" secondAttribute="bottom" constant="5" id="D2Z-sz-b5L"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="gcf-kK-q4u" secondAttribute="trailing" constant="8" id="KSV-ft-e9e"/>
-                                        <constraint firstAttribute="bottom" secondItem="dz4-7a-xyV" secondAttribute="bottom" constant="5" id="Ppz-aH-MlK"/>
                                         <constraint firstItem="dz4-7a-xyV" firstAttribute="leading" secondItem="hNs-iH-SEl" secondAttribute="leadingMargin" constant="8" id="Qzw-Co-x8T"/>
                                         <constraint firstItem="gcf-kK-q4u" firstAttribute="leading" secondItem="hNs-iH-SEl" secondAttribute="leadingMargin" constant="8" id="R6G-t6-drh"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="dz4-7a-xyV" secondAttribute="trailing" constant="8" id="azU-HP-td7"/>
                                         <constraint firstItem="Sb1-US-mpT" firstAttribute="leading" secondItem="hNs-iH-SEl" secondAttribute="leadingMargin" constant="8" id="bUo-nY-ax8"/>
+                                        <constraint firstAttribute="bottom" secondItem="dz4-7a-xyV" secondAttribute="bottom" constant="6" id="dJk-4d-5Es"/>
                                         <constraint firstItem="Sb1-US-mpT" firstAttribute="top" secondItem="hNs-iH-SEl" secondAttribute="topMargin" id="rjl-Bd-7ZS"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Sb1-US-mpT" secondAttribute="trailing" constant="8" id="vjo-fC-0iX"/>
                                     </constraints>
@@ -71,8 +74,9 @@
                             <outlet property="delegate" destination="5hJ-wZ-bh3" id="6Jt-Gx-QyJ"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="News" image="book" catalog="system" id="6iD-PZ-o6s"/>
                     <navigationItem key="navigationItem" title="Corona News" id="xiW-Pp-JoD">
-                        <barButtonItem key="rightBarButtonItem" title="Profile" id="veW-2I-caF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="veW-2I-caF" userLabel="Referesh"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -82,18 +86,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmD-mh-Sse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4031.884057971015" y="12.723214285714285"/>
+            <point key="canvasLocation" x="3121.739130434783" y="12.723214285714285"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="pEm-Ga-SIw">
             <objects>
                 <viewController id="1KX-Id-NjV" customClass="WebViewController" customModule="Covid_19App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H8U-gm-tNF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0M1-8i-7KY">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -114,26 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRd-Hs-yFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4995.652173913044" y="12.723214285714285"/>
-        </scene>
-        <!--News-->
-        <scene sceneID="jPY-U0-b6f">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z3x-6e-xyw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" image="book" catalog="system" id="6iD-PZ-o6s"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nu2-23-wcG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="5hJ-wZ-bh3" kind="relationship" relationship="rootViewController" id="1kM-KZ-Qix"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="csi-od-0Tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3121.739130434783" y="12.723214285714285"/>
+            <point key="canvasLocation" x="4086" y="13"/>
         </scene>
     </scenes>
     <resources>
