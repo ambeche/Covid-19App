@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Qf-0M-Uhz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gU8-L8-ZXW">
-                                <rect key="frame" x="78" y="258" width="258" height="172"/>
+                                <rect key="frame" x="78" y="302" width="258" height="172"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-Su-5fd">
                                         <rect key="frame" x="0.0" y="0.0" width="258" height="40"/>
@@ -126,7 +126,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Global Statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqr-mw-tbs">
-                                <rect key="frame" x="78" y="136" width="258" height="63"/>
+                                <rect key="frame" x="78" y="180" width="258" height="63"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,6 +145,12 @@
                         <viewLayoutGuide key="safeArea" id="mol-Xp-NcT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="vfq-2D-x8b"/>
+                    <connections>
+                        <outlet property="gConfirmed" destination="08C-0I-dfj" id="a54-PQ-KW8"/>
+                        <outlet property="gCritical" destination="J4w-Eq-XBS" id="RlZ-x4-REB"/>
+                        <outlet property="gDeaths" destination="eji-GY-ltk" id="uav-Fj-cRc"/>
+                        <outlet property="gRecoverd" destination="7Qm-D5-MEM" id="ChU-dY-geI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tc1-qa-hpl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
