@@ -10,6 +10,7 @@
 		6A69994424518BBF00F41D68 /* auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A69994324518BBF00F41D68 /* auth.storyboard */; };
 		6A700080245746FA008A3314 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70007F245746FA008A3314 /* CountryDetailsViewController.swift */; };
 		6A700086245850EF008A3314 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A700085245850EF008A3314 /* HomeTab.storyboard */; };
+		6A7000882458D8DF008A3314 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7000872458D8DF008A3314 /* HomeScreenViewController.swift */; };
 		6A7B73F1244853680096EE52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F0244853680096EE52 /* AppDelegate.swift */; };
 		6A7B73F3244853680096EE52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F2244853680096EE52 /* SceneDelegate.swift */; };
 		6A7B73F5244853680096EE52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F4244853680096EE52 /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 		6A69994324518BBF00F41D68 /* auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = auth.storyboard; sourceTree = "<group>"; };
 		6A70007F245746FA008A3314 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		6A700085245850EF008A3314 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
+		6A7000872458D8DF008A3314 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		6A7B73ED244853680096EE52 /* Covid-19App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7B73F0244853680096EE52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A7B73F2244853680096EE52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				F79818442459472000C0CC4A /* RecSymptomsTableViewCell.swift */,
 				F79818402458BCCE00C0CC4A /* LoginViewController.swift */,
 				6A70007F245746FA008A3314 /* CountryDetailsViewController.swift */,
+				6A7000872458D8DF008A3314 /* HomeScreenViewController.swift */,
 				6AA55ED22452FA3F003585EA /* Covid19API.swift */,
 				6AA55ED42454DD90003585EA /* Covid19Data.swift */,
 				6A7B73FC244853690096EE52 /* Assets.xcassets */,
