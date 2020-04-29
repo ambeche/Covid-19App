@@ -6,7 +6,7 @@
         <attribute name="url" optional="YES" attributeType="String"/>
         <attribute name="urlIm" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Symptom" representedClassName="Symptom" syncable="YES" codeGenerationType="class">
+    <entity name="Symptom" representedClassName=".Symptom" syncable="YES">
         <attribute name="breathing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="chills" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="cough" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
