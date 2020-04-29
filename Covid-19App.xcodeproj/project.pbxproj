@@ -10,7 +10,6 @@
 		6A69994424518BBF00F41D68 /* auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A69994324518BBF00F41D68 /* auth.storyboard */; };
 		6A700080245746FA008A3314 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70007F245746FA008A3314 /* CountryDetailsViewController.swift */; };
 		6A700086245850EF008A3314 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A700085245850EF008A3314 /* HomeTab.storyboard */; };
-		6A7000882458D8DF008A3314 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7000872458D8DF008A3314 /* HomeScreenViewController.swift */; };
 		6A7B73F1244853680096EE52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F0244853680096EE52 /* AppDelegate.swift */; };
 		6A7B73F3244853680096EE52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F2244853680096EE52 /* SceneDelegate.swift */; };
 		6A7B73F5244853680096EE52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B73F4244853680096EE52 /* ViewController.swift */; };
@@ -25,6 +24,7 @@
 		6AA55ED12452EDA3003585EA /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA55ED02452EDA3003585EA /* StatisticsTableViewCell.swift */; };
 		6AA55ED32452FA3F003585EA /* Covid19API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA55ED22452FA3F003585EA /* Covid19API.swift */; };
 		6AA55ED52454DD90003585EA /* Covid19Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA55ED42454DD90003585EA /* Covid19Data.swift */; };
+		6ABCA9C224595B5D00BBE3AD /* Symptoms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ABCA9C124595B5D00BBE3AD /* Symptoms.storyboard */; };
 		F70D746C2452B967006B7008 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D746B2452B967006B7008 /* NewsTableViewController.swift */; };
 		F70D746E2452B9C3006B7008 /* NewsDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D746D2452B9C3006B7008 /* NewsDataFetcher.swift */; };
 		F70D74702452BA1B006B7008 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D746F2452BA1B006B7008 /* NewsData.swift */; };
@@ -84,6 +84,7 @@
 		6AA55ED02452EDA3003585EA /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
 		6AA55ED22452FA3F003585EA /* Covid19API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19API.swift; sourceTree = "<group>"; };
 		6AA55ED42454DD90003585EA /* Covid19Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19Data.swift; sourceTree = "<group>"; };
+		6ABCA9C124595B5D00BBE3AD /* Symptoms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Symptoms.storyboard; sourceTree = "<group>"; };
 		F70D746B2452B967006B7008 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		F70D746D2452B9C3006B7008 /* NewsDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataFetcher.swift; sourceTree = "<group>"; };
 		F70D746F2452BA1B006B7008 /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
@@ -207,6 +208,7 @@
 				6AA55EC22451924B003585EA /* Statistics.storyboard */,
 				6A700085245850EF008A3314 /* HomeTab.storyboard */,
 				F79818382458972500C0CC4A /* Profile.storyboard */,
+				6ABCA9C124595B5D00BBE3AD /* Symptoms.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -317,6 +319,7 @@
 			files = (
 				F7E8678D2451905F002C09F8 /* CoronaNews.storyboard in Resources */,
 				6A69994424518BBF00F41D68 /* auth.storyboard in Resources */,
+				6ABCA9C224595B5D00BBE3AD /* Symptoms.storyboard in Resources */,
 				F79818392458972500C0CC4A /* Profile.storyboard in Resources */,
 				6A700086245850EF008A3314 /* HomeTab.storyboard in Resources */,
 				6A7B7400244853690096EE52 /* LaunchScreen.storyboard in Resources */,
