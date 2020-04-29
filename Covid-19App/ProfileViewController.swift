@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var logoutBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +18,10 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let covidDefaults = UserDefaults.standard
-        if (covidDefaults.string(forKey: "user") == nil) {
-            pushToLoginScreen()
-        }
+//        let covidDefaults = UserDefaults.standard
+//        if (covidDefaults.string(forKey: "user") == nil) {
+//            pushToLoginScreen()
+//        }
     }
     
     @IBAction func unwindToProfileScreen (unwindSegue: UIStoryboardSegue) {
@@ -37,9 +37,9 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logoutBtnPressed(_ sender: UIButton) {
-        let covidDefaults = UserDefaults.standard
-        covidDefaults.removeObject(forKey: "user")
-        pushToLoginScreen()
+//        let covidDefaults = UserDefaults.standard
+//        covidDefaults.removeObject(forKey: "user")
+//        pushToLoginScreen()
     }
     
     /*
