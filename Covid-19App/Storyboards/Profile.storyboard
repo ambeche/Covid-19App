@@ -10,7 +10,6 @@
         <!--Profile-->
         <scene sceneID="6cC-sD-pMO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5z-Eh-Zd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="profileVC" title="Profile" id="81v-4Q-F1B" customClass="ProfileViewController" customModule="Covid_19App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7fj-7S-q9r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -73,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0q-1E-SG4">
-                                <rect key="frame" x="20" y="547" width="374" height="36"/>
+                                <rect key="frame" x="20" y="672" width="374" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="LOGOUT"/>
@@ -81,8 +80,29 @@
                                     <action selector="logoutBtnPressed:" destination="81v-4Q-F1B" eventType="touchUpInside" id="v7F-yH-8X8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhH-HW-vcS">
+                                <rect key="frame" x="20" y="727" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="DELETE ALL USERS"/>
+                                <connections>
+                                    <action selector="deleteAllUsersBtnPressed:" destination="81v-4Q-F1B" eventType="touchUpInside" id="0nJ-5Q-naV"/>
+                                    <action selector="logoutBtnPressed:" destination="81v-4Q-F1B" eventType="touchUpInside" id="vAL-qk-npH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-Ew-Xsm">
+                                <rect key="frame" x="20" y="619" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="LIST OF REGISTERED USERS"/>
+                                <connections>
+                                    <action selector="listOfRegisteredUsersBtnPressed:" destination="81v-4Q-F1B" eventType="touchUpInside" id="fgH-ZW-xNN"/>
+                                    <action selector="logoutBtnPressed:" destination="81v-4Q-F1B" eventType="touchUpInside" id="abh-a1-3Jz"/>
+                                    <segue destination="DnG-Cb-G9x" kind="show" id="tNV-xO-mai"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqT-t4-3iN">
-                                <rect key="frame" x="20" y="487" width="374" height="36"/>
+                                <rect key="frame" x="20" y="575" width="374" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="LIST OF RECORDED SYMPTOMS"/>
@@ -91,10 +111,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qay-Ww-CLK">
-                                <rect key="frame" x="20" y="430" width="374" height="36"/>
+                                <rect key="frame" x="20" y="479" width="374" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="RECORD SYMPTOMS"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFy-Jc-kVR">
+                                <rect key="frame" x="20" y="430" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="RECORD DEFAULT SYMPTOMS"/>
+                                <connections>
+                                    <action selector="recordDefaultSymptomsBtnPressed:" destination="81v-4Q-F1B" eventType="touchUpInside" id="efy-7r-BnT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flu, Fever, Cough" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsa-PC-gYQ">
                                 <rect key="frame" x="20" y="379" width="374" height="27"/>
@@ -110,6 +139,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ml8-Kt-NiW">
+                                <rect key="frame" x="20" y="523" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="DELETE ALL RECORDED SYMPTOMS"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="elT-3q-Aj8"/>
@@ -117,13 +152,17 @@
                     <navigationItem key="navigationItem" title="Profile" id="1Jy-lA-9KF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="loggedInUserEmailLabel" destination="cUH-xR-C6N" id="Ef3-Pv-fOh"/>
+                        <outlet property="loggedInUserNameLabel" destination="xBG-QF-b7s" id="kcw-LN-r79"/>
+                        <outlet property="loggedInUserStatusLabel" destination="vnx-JI-3FR" id="VUc-CZ-8yJ"/>
                         <outlet property="logoutBtn" destination="Q0q-1E-SG4" id="4Ei-TT-OK3"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5z-Eh-Zd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2320" y="123"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Recorded Symptoms-->
         <scene sceneID="JHB-jX-rdO">
             <objects>
                 <tableViewController id="51q-5p-NIl" sceneMemberID="viewController">
@@ -146,7 +185,7 @@
                             <outlet property="delegate" destination="51q-5p-NIl" id="OvG-tU-fwe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8Jq-IJ-uYe"/>
+                    <navigationItem key="navigationItem" title="Recorded Symptoms" id="8Jq-IJ-uYe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1c9-xA-DLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,6 +208,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDE-8G-OTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1138" y="139"/>
+        </scene>
+        <!--Registered Users-->
+        <scene sceneID="lOf-mX-bbS">
+            <objects>
+                <tableViewController id="DnG-Cb-G9x" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ABa-Mq-iin">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0w9-nc-VUT">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0w9-nc-VUT" id="OF6-rK-rju">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DnG-Cb-G9x" id="aIy-97-iqe"/>
+                            <outlet property="delegate" destination="DnG-Cb-G9x" id="Vs3-5n-zMT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Registered Users" id="cVK-7x-hTK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8V-tn-p3L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3225" y="773"/>
         </scene>
     </scenes>
 </document>

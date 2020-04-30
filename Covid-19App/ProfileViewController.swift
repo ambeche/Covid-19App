@@ -10,18 +10,32 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @IBOutlet weak var loggedInUserNameLabel: UILabel!
     @IBOutlet weak var logoutBtn: UIButton!
+    @IBOutlet weak var loggedInUserEmailLabel: UILabel!
+    @IBOutlet weak var loggedInUserStatusLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        let covidDefaults = UserDefaults.standard
-//        if (covidDefaults.string(forKey: "user") == nil) {
-//            pushToLoginScreen()
-//        }
+        let covidDefaults = UserDefaults.standard
+        if (covidDefaults.string(forKey: "loggedInUser") == nil) {
+        pushToLoginScreen()
+        } else {
+            guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
+                return
+            }
+            do {
+                let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
+                loggedInUserEmailLabel.text = loggedInUser.name
+                loggedInUserNameLabel.text = loggedInUser.email
+            } catch let error as NSError {
+                print("Could not fetch user with email. \(error). \(error.userInfo)")
+            }
+        }
     }
     
     @IBAction func unwindToProfileScreen (unwindSegue: UIStoryboardSegue) {
@@ -37,10 +51,32 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logoutBtnPressed(_ sender: UIButton) {
-//        let covidDefaults = UserDefaults.standard
-//        covidDefaults.removeObject(forKey: "user")
-//        pushToLoginScreen()
+        let covidDefaults = UserDefaults.standard
+        covidDefaults.removeObject(forKey: "loggedInUser")
+        pushToLoginScreen()
     }
+
+    @IBAction func recordDefaultSymptomsBtnPressed(_ sender: UIButton) {
+        
+    }
+    
+    
+    @IBAction func deleteAllUsersBtnPressed(_ sender: UIButton) {
+            do {
+                try User.deleteAllUsers(context: self.viewContext)
+            }catch let error as NSError {
+                print("Could not delete. \(error). \(error.userInfo)")
+            }
+        }
+    
+    @IBAction func listOfRegisteredUsersBtnPressed(_ sender: UIButton)
+        {
+            do {
+                try User.fetchAllUsers(context: self.viewContext)
+            } catch let error as NSError {
+                print("Could not save. \(error). \(error.userInfo)")
+            }
+        }
     
     /*
     // MARK: - Navigation
