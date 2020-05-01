@@ -35,6 +35,7 @@ public class User: NSManagedObject {
     }
     
     class func fetchUserByEmail (email: String, context: NSManagedObjectContext) throws -> User {
+        print("user fetched with Email, \(email)")
         let userRequestByEmail: NSFetchRequest = User.fetchRequest()
         userRequestByEmail.predicate = NSPredicate(format: "email = %@", email)
         do {
@@ -65,18 +66,15 @@ public class User: NSManagedObject {
     class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws {
         do {
             let targetObject = try fetchUserByEmail(email: email, context: context)
-            let customSymptom = Symptom(context: context)
-            customSymptom.isOwnedBy = targetObject
-            
-            if let symptomSet = targetObject.owns as? Set<Symptom> {
+//            let customSymptom = Symptom(context: context)
+//            customSymptom.symptomBelongToUser = targetObject
+            if let symptomSet = targetObject.userHasSymptoms?.mutableOrderedSetValue(forKey: "time" as? Set<Symptom){
                 for symptom in symptomSet {
-                    print("\(symptom.date ?? "no date found")")
+                    print("\(symptom.time ?? "no time string found")")
                 }
-            }
             }
         } catch {
             throw error
         }
-
     }
 }

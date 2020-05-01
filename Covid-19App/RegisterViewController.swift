@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
     }
     
     func saveUserData() {
-        print("saveUserData to context")
+        print("saveUserData to function called")
         do {
             if (try !User.checkUserExists(email: emailRegister.text ?? "", context: self.viewContext)) {
                 let newUser = User(context: self.viewContext)
@@ -31,6 +31,13 @@ class RegisterViewController: UIViewController {
                 newUser.password = passwordRegister.text
                 // saving default status i.e. healthy
                 newUser.status = "Healthy"
+                // adding symptoms here for testing purposes
+                let symptom1 = Symptom(context: self.viewContext)
+                symptom1.time = "number1"
+                symptom1.symptomBelongToUser = newUser
+                let symptom2 = Symptom(context: self.viewContext)
+                symptom2.time = "number2"
+                symptom2.symptomBelongToUser = newUser
             }
             try viewContext.save()
             print ("user saved successfully")
@@ -38,6 +45,8 @@ class RegisterViewController: UIViewController {
             let covidDefaults = UserDefaults.standard
             covidDefaults.set(nameRegister.text, forKey: "loggedInUser")
             try User.fetchAllUsers(context: self.viewContext)
+            //retrieving symptoms here for testing purposes
+            try User.fetchAllSymptomsForUser(email: emailRegister.text!, context: self.viewContext)
         } catch let error as NSError {
             print("Could not save. \(error). \(error.userInfo)")
         }
@@ -45,8 +54,8 @@ class RegisterViewController: UIViewController {
     
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
         saveUserData()
+//        self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
     }
     
     // created for future functionalities like authentication

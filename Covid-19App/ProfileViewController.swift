@@ -32,6 +32,7 @@ class ProfileViewController: UIViewController {
                 let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
                 loggedInUserEmailLabel.text = loggedInUser.name
                 loggedInUserNameLabel.text = loggedInUser.email
+                try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
             } catch let error as NSError {
                 print("Could not fetch user with email. \(error). \(error.userInfo)")
             }
@@ -57,17 +58,43 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func recordDefaultSymptomsBtnPressed(_ sender: UIButton) {
-        
+        let covidDefaults = UserDefaults.standard
+        guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
+            return
+        }
+        do {
+            let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
+            let symptom1 = Symptom(context: self.viewContext)
+            symptom1.time = "number1"
+            symptom1.symptomBelongToUser = loggedInUser
+            let symptom2 = Symptom(context: self.viewContext)
+            symptom2.time = "number2"
+            symptom2.symptomBelongToUser = loggedInUser
+        } catch let error as NSError {
+            print("Could not fetch user with email. \(error). \(error.userInfo)")
+        }
     }
     
+    @IBAction func listOfRecordedSymptomsBtnPressed(_ sender: UIButton) {
+        let covidDefaults = UserDefaults.standard
+        guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
+            return
+        }
+        do {
+//            let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
+            try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
+        } catch let error as NSError {
+            print("Could not fetch user with email. \(error). \(error.userInfo)")
+        }
+    }
     
     @IBAction func deleteAllUsersBtnPressed(_ sender: UIButton) {
-            do {
-                try User.deleteAllUsers(context: self.viewContext)
-            }catch let error as NSError {
-                print("Could not delete. \(error). \(error.userInfo)")
-            }
+        do {
+            try User.deleteAllUsers(context: self.viewContext)
+        }catch let error as NSError {
+            print("Could not delete. \(error). \(error.userInfo)")
         }
+    }
     
     @IBAction func listOfRegisteredUsersBtnPressed(_ sender: UIButton)
         {

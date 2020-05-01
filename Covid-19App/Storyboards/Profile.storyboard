@@ -107,6 +107,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="LIST OF RECORDED SYMPTOMS"/>
                                 <connections>
+                                    <action selector="listOfRecordedSymptomsBtnPressed:" destination="81v-4Q-F1B" eventType="touchUpInside" id="fqz-ax-hJ5"/>
                                     <segue destination="51q-5p-NIl" kind="show" id="aSu-Dx-SP9"/>
                                 </connections>
                             </button>
