@@ -9,18 +9,34 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @IBOutlet weak var loggedInUserNameLabel: UILabel!
     @IBOutlet weak var logoutBtn: UIButton!
+    @IBOutlet weak var loggedInUserEmailLabel: UILabel!
+    @IBOutlet weak var loggedInUserStatusLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         let covidDefaults = UserDefaults.standard
-        if (covidDefaults.string(forKey: "user") == nil) {
-            pushToLoginScreen()
+        if (covidDefaults.string(forKey: "loggedInUser") == nil) {
+        pushToLoginScreen()
+        } else {
+            guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
+                return
+            }
+            do {
+                let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
+                loggedInUserEmailLabel.text = loggedInUser.name
+                loggedInUserNameLabel.text = loggedInUser.email
+                loggedInUserStatusLabel.text = loggedInUser.status
+                try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
+            } catch let error as NSError {
+                print("Could not fetch user with email. \(error). \(error.userInfo)")
+            }
         }
     }
     
@@ -38,9 +54,56 @@ class ProfileViewController: UIViewController {
     
     @IBAction func logoutBtnPressed(_ sender: UIButton) {
         let covidDefaults = UserDefaults.standard
-        covidDefaults.removeObject(forKey: "user")
+        covidDefaults.removeObject(forKey: "loggedInUser")
         pushToLoginScreen()
     }
+
+    @IBAction func recordDefaultSymptomsBtnPressed(_ sender: UIButton) {
+        let covidDefaults = UserDefaults.standard
+        guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
+            return
+        }
+        do {
+            let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
+            let symptom1 = Symptom(context: self.viewContext)
+            symptom1.time = "number1"
+            symptom1.symptomBelongToUser = loggedInUser
+            let symptom2 = Symptom(context: self.viewContext)
+            symptom2.time = "number2"
+            symptom2.symptomBelongToUser = loggedInUser
+        } catch let error as NSError {
+            print("Could not fetch user with email. \(error). \(error.userInfo)")
+        }
+    }
+    
+    @IBAction func listOfRecordedSymptomsBtnPressed(_ sender: UIButton) {
+        let covidDefaults = UserDefaults.standard
+        guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
+            return
+        }
+        do {
+            try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
+        } catch let error as NSError {
+            print("Could not fetch user with email. \(error). \(error.userInfo)")
+        }
+    }
+    
+    @IBAction func deleteAllUsersBtnPressed(_ sender: UIButton) {
+        do {
+            try User.deleteAllUsers(context: self.viewContext)
+        }catch let error as NSError {
+            print("Could not delete. \(error). \(error.userInfo)")
+        }
+    }
+    
+    @IBAction func listOfRegisteredUsersBtnPressed(_ sender: UIButton)
+        {
+            do {
+                try User.fetchAllUsers(context: self.viewContext)
+            } catch let error as NSError {
+                print("Could not save. \(error). \(error.userInfo)")
+            }
+        }
     
     /*
     // MARK: - Navigation

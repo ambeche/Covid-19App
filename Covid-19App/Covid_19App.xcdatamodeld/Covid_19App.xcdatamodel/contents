@@ -6,14 +6,29 @@
         <attribute name="url" optional="YES" attributeType="String"/>
         <attribute name="urlIm" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Symptom" representedClassName=".Symptom" syncable="YES">
+        <attribute name="breathing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="chills" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="cough" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="fever" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="headache" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="muscle" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="taste" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="throat" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+        <relationship name="symptomBelongToUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userHasSymptoms" inverseEntity="User"/>
+    </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="userHasSymptoms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Symptom" inverseName="symptomBelongToUser" inverseEntity="Symptom"/>
     </entity>
     <elements>
         <element name="NewsArticle" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="User" positionX="-54" positionY="18" width="128" height="103"/>
+        <element name="Symptom" positionX="-36" positionY="45" width="128" height="208"/>
+        <element name="User" positionX="-54" positionY="18" width="128" height="118"/>
     </elements>
 </model>
