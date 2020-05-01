@@ -10,6 +10,26 @@ import UIKit
 
 class SymptomsViewController: UIViewController {
 
+    
+    @IBAction func fever(_ sender: Any) {
+    }
+    
+    @IBAction func cough(_ sender: Any) {
+    }
+    
+    @IBAction func beathingdifficulties(_ sender: Any) {
+    }
+    
+    @IBAction func musclepain(_ sender: Any) {
+    }
+    @IBAction func sorethroat(_ sender: Any) {
+    }
+    @IBAction func chills(_ sender: Any) {
+    }
+    @IBAction func headache(_ sender: Any) {
+    }
+    @IBAction func lossoftasteorsmell(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
