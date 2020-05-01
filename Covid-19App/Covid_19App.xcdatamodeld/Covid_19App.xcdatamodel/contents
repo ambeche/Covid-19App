@@ -24,7 +24,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
-        <relationship name="userHasSymptoms" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Symptom" inverseName="symptomBelongToUser" inverseEntity="Symptom"/>
+        <relationship name="userHasSymptoms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Symptom" inverseName="symptomBelongToUser" inverseEntity="Symptom"/>
     </entity>
     <elements>
         <element name="NewsArticle" positionX="-63" positionY="-18" width="128" height="103"/>

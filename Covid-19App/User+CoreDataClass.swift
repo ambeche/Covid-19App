@@ -66,9 +66,7 @@ public class User: NSManagedObject {
     class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws {
         do {
             let targetObject = try fetchUserByEmail(email: email, context: context)
-//            let customSymptom = Symptom(context: context)
-//            customSymptom.symptomBelongToUser = targetObject
-            if let symptomSet = targetObject.userHasSymptoms?.mutableOrderedSetValue(forKey: "time" as? Set<Symptom){
+            if let symptomSet = targetObject.userHasSymptoms as? Set<Symptom>{
                 for symptom in symptomSet {
                     print("\(symptom.time ?? "no time string found")")
                 }

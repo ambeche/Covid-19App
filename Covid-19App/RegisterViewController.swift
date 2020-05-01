@@ -31,7 +31,7 @@ class RegisterViewController: UIViewController {
                 newUser.password = passwordRegister.text
                 // saving default status i.e. healthy
                 newUser.status = "Healthy"
-                // adding symptoms here for testing purposes
+                // adding default symptoms here for testing purposes
                 let symptom1 = Symptom(context: self.viewContext)
                 symptom1.time = "number1"
                 symptom1.symptomBelongToUser = newUser
@@ -43,10 +43,10 @@ class RegisterViewController: UIViewController {
             print ("user saved successfully")
             // seeting up userDefault key for loggedInUser
             let covidDefaults = UserDefaults.standard
-            covidDefaults.set(nameRegister.text, forKey: "loggedInUser")
+            covidDefaults.set(emailRegister.text, forKey: "loggedInUser")
             try User.fetchAllUsers(context: self.viewContext)
             //retrieving symptoms here for testing purposes
-            try User.fetchAllSymptomsForUser(email: emailRegister.text!, context: self.viewContext)
+            //try User.fetchAllSymptomsForUser(email: emailRegister.text!, context: self.viewContext)
         } catch let error as NSError {
             print("Could not save. \(error). \(error.userInfo)")
         }
@@ -55,7 +55,7 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         saveUserData()
-//        self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
+        self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
     }
     
     // created for future functionalities like authentication

@@ -32,6 +32,7 @@ class ProfileViewController: UIViewController {
                 let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
                 loggedInUserEmailLabel.text = loggedInUser.name
                 loggedInUserNameLabel.text = loggedInUser.email
+                loggedInUserStatusLabel.text = loggedInUser.status
                 try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
             } catch let error as NSError {
                 print("Could not fetch user with email. \(error). \(error.userInfo)")
@@ -81,7 +82,6 @@ class ProfileViewController: UIViewController {
             return
         }
         do {
-//            let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
             try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
         } catch let error as NSError {
             print("Could not fetch user with email. \(error). \(error.userInfo)")
