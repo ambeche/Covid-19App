@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController {
                 loggedInUserEmailLabel.text = loggedInUser.name
                 loggedInUserNameLabel.text = loggedInUser.email
                 loggedInUserStatusLabel.text = loggedInUser.status
+                loggedInUserStatusLabel.backgroundColor = UIColor.red
                 try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
             } catch let error as NSError {
                 print("Could not fetch user with email. \(error). \(error.userInfo)")
