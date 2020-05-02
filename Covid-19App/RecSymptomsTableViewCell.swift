@@ -10,6 +10,7 @@ import UIKit
 
 class RecSymptomsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var symptomContentView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
