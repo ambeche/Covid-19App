@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let covidDefaults = UserDefaults.standard
+        covidDefaults.set("tester12@metropolia.fi", forKey: "loggedInUser")
         if (covidDefaults.string(forKey: "loggedInUser") == nil) {
         pushToLoginScreen()
         } else {

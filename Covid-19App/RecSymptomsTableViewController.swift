@@ -9,6 +9,7 @@
 import UIKit
 
 class RecSymptomsTableViewController: UITableViewController {
+        let statusArray: Array<String> = ["Healthy", "Quarantined", "Covid-19 +", "Recovered"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,23 +25,91 @@ class RecSymptomsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "symtomTableViewCell", for: indexPath) as? RecSymptomsTableViewCell else{
+            fatalError("The dequeued cell is not an instance of RecSymptomsTableViewCell")
+        }
+        
+        //Date text label config
+        let dateLabel = UILabel()
+        dateLabel.frame = CGRect(x: 20, y: 11, width: 374, height: 21)
+        let currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        formatter.locale = Locale(identifier: "en_US")
+        dateLabel.text = formatter.string(from: currentDate)
+        dateLabel.textAlignment = NSTextAlignment.center
+        dateLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        cell.symptomContentView.addSubview(dateLabel)
+        
+        //Fever text label config
+        let feverLabel = UILabel()
+        feverLabel.frame = CGRect(x: 20, y: 37, width: 374, height: 21)
+        feverLabel.text = "🤒 Fever"
+        cell.symptomContentView.addSubview(feverLabel)
+        
+        //Cough text label config
+        let coughLabel = UILabel()
+        coughLabel.frame = CGRect(x: 20, y: 60, width: 374, height: 21)
+        coughLabel.text = "😷 Cough"
+        cell.symptomContentView.addSubview(coughLabel)
+        
+        //Breathing Difficulties text label config
+        let breathDiffLabel = UILabel()
+        breathDiffLabel.frame = CGRect(x: 20, y: 83, width: 374, height: 21)
+        breathDiffLabel.text = "🤢 Breathing Difficulties"
+        cell.symptomContentView.addSubview(breathDiffLabel)
+        
+        //Muscle Pain text label config
+        let musclePainLabel = UILabel()
+        musclePainLabel.frame = CGRect(x: 20, y: 106, width: 374, height: 21)
+        musclePainLabel.text = "🥵 Muscle Pain"
+        cell.symptomContentView.addSubview(musclePainLabel)
+        
+        //Sore Throat text label config
+        let soreThroatLabel = UILabel()
+        soreThroatLabel.frame = CGRect(x: 20, y: 129, width: 374, height: 21)
+        soreThroatLabel.text = "🤧 Sore Throat"
+        cell.symptomContentView.addSubview(soreThroatLabel)
+        
+        //Chills text label config
+        let chillsLabel = UILabel()
+        chillsLabel.frame = CGRect(x: 20, y: 152, width: 374, height: 21)
+        chillsLabel.text = "🥶 Chills"
+        cell.symptomContentView.addSubview(chillsLabel)
+        
+        
+        //Headache text label config
+        let headacheLabel = UILabel()
+        headacheLabel.frame = CGRect(x: 20, y: 175, width: 374, height: 21)
+        headacheLabel.text = "🤕 Headache"
+        cell.symptomContentView.addSubview(headacheLabel)
+        
+        //Loss of Taste or Smell
+        let lossOfTasSmellLabel = UILabel()
+        lossOfTasSmellLabel.frame = CGRect(x: 20, y: 198, width: 374, height: 21)
+        lossOfTasSmellLabel.text = "🤮 Loss of Taste or Smell"
+        cell.symptomContentView.addSubview(lossOfTasSmellLabel)
+        
+        
         // Configure the cell...
-
         return cell
     }
-    */
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
 
     /*
     // Override to support conditional editing of the table view.
