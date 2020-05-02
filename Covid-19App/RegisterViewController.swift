@@ -9,15 +9,21 @@
 import UIKit
 import CoreData
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var nameRegister: UITextField!
     @IBOutlet weak var emailRegister: UITextField!
     @IBOutlet weak var passwordRegister: UITextField!
+    @IBOutlet weak var fullNameErrorText: UILabel!
+    @IBOutlet weak var emailErrorText: UILabel!
+    @IBOutlet weak var passwordErrorText: UILabel!
+    @IBOutlet weak var confirmPasswordRegister: UITextField!
+    @IBOutlet weak var registerBtnErrorText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.passwordRegister.isSecureTextEntry = true
+        self.confirmPasswordRegister.isSecureTextEntry = true
         // Do any additional setup after loading the view.
     }
     
@@ -31,20 +37,14 @@ class RegisterViewController: UIViewController {
                 newUser.password = passwordRegister.text
                 // saving default status i.e. healthy
                 newUser.status = "Healthy"
-                // adding default symptoms here for testing purposes
-                let symptom1 = Symptom(context: self.viewContext)
-                symptom1.time = "number1"
-                symptom1.symptomBelongToUser = newUser
-                let symptom2 = Symptom(context: self.viewContext)
-                symptom2.time = "number2"
-                symptom2.symptomBelongToUser = newUser
             }
             try viewContext.save()
             print ("user saved successfully")
-            // seeting up userDefault key for loggedInUser
+            // setting up userDefault key for loggedInUser
             let covidDefaults = UserDefaults.standard
             covidDefaults.set(emailRegister.text, forKey: "loggedInUser")
-            try User.fetchAllUsers(context: self.viewContext)
+            //line for fetching users for testing purposes
+            //try User.fetchAllUsers(context: self.viewContext)
             //retrieving symptoms here for testing purposes
             //try User.fetchAllSymptomsForUser(email: emailRegister.text!, context: self.viewContext)
         } catch let error as NSError {
@@ -54,16 +54,83 @@ class RegisterViewController: UIViewController {
     
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        saveUserData()
-        self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
+        //Authentication Tests
+        let nameValid = self.isFullNameValid(fullName: self.nameRegister.text!)
+        let emailValid = self.isEmailValid(email: self.emailRegister.text!)
+        let passwordValid = self.isPasswordValid(password: self.passwordRegister.text!)
+        if (nameValid && emailValid && passwordValid){
+            saveUserData()
+            self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
+            self.registerBtnErrorText.text = ""
+        } else {
+            self.registerBtnErrorText.text = "One or more fields require your attention"
+        }
+    }
+    
+    func isEmailValid(email: String) -> Bool {
+        //check if email is valid
+        do {
+            let regularExpressionForEmail = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            let testEmail = NSPredicate(format:"SELF MATCHES %@", regularExpressionForEmail)
+            let validEmail = testEmail.evaluate(with: email)
+            if (!validEmail) {
+                self.emailErrorText.text = "Email Format Not Correct"
+                return false
+            }
+            let emailAvailable = try !User.checkUserExists(email: emailRegister.text ?? "", context: self.viewContext)
+            if (!emailAvailable) {
+                self.emailErrorText.text = "Email already registered"
+                return false
+            }
+            self.emailErrorText.text = ""
+            return true
+            
+        } catch let error as NSError {
+            print("Could not check email avaialability. \(error). \(error.userInfo)")
+            self.emailErrorText.text = "Email availability could not be checked"
+            return false
+        }
+    }
+    
+    func isFullNameValid(fullName: String) -> Bool {
+        if (fullName.count > 3) {
+            self.fullNameErrorText.text = ""
+            return true
+        }
+        self.fullNameErrorText.text = "Full name must be greater than 3 characters"
+        return false
+    }
+    
+    func isPasswordValid(password: String) -> Bool {
+        if (password.count <= 5) {
+            self.passwordErrorText.text = "Password length must be greater than 5"
+            return false
+        }
+        if (self.passwordRegister.text != self.confirmPasswordRegister.text){
+            self.passwordErrorText.text = "Passwords do not match"
+            return false
+        }
+        self.passwordErrorText.text = ""
+        return true
     }
     
     // created for future functionalities like authentication
-    @IBAction func registerNameDidEndEditing(_ sender: UITextField) {
+    
+    @IBAction func nameDidEndEditing(_ sender: UITextField) {
+        self.isFullNameValid(fullName: self.nameRegister.text!)
     }
+    
     @IBAction func registerEmailDidEndEditing(_ sender: UITextField) {
+        self.isEmailValid(email: emailRegister.text!)
     }
+    
     @IBAction func registerPasswordDidEndEditing(_ sender: UITextField) {
+        self.isPasswordValid(password: self.passwordRegister.text!)
+    }
+    
+    
+    @IBAction func confirmPasswordDidEndEditing(_ sender: UITextField) {
+            self.isPasswordValid(password: self.passwordRegister.text!)
     }
     
     /*

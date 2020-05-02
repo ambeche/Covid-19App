@@ -9,13 +9,15 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginBtnErrorText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.passwordTextField.isSecureTextEntry = true
     }
     
 
@@ -29,9 +31,27 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        let covidDefaults = UserDefaults.standard
-        covidDefaults.set("rafe", forKey: "user")
-        self.performSegue(withIdentifier: "BackToProfileScreen", sender: nil)
+        do {
+           let emailExists = try User.checkUserExists(email: emailTextField.text ?? "", context: self.viewContext)
+            if (emailExists) {
+                let targetUser = try User.fetchUserByEmail(email: emailTextField.text!, context: self.viewContext)
+                if (targetUser.password == passwordTextField.text!) {
+                    //successful login
+                    self.loginBtnErrorText.text = ""
+                    let covidDefaults = UserDefaults.standard
+                    covidDefaults.set(emailTextField.text!, forKey: "loggedInUser")
+                    self.performSegue(withIdentifier: "BackToProfileScreen", sender: nil)
+                } else {
+                    self.loginBtnErrorText.text = "Wrong username or password"
+                }
+                
+            } else {
+                self.loginBtnErrorText.text = "Wrong username or password"
+            }
+        } catch let error as NSError {
+            print("Could not verify login details. \(error). \(error.userInfo)")
+            self.loginBtnErrorText.text = "Could not verify login details"
+        }
     }
     
     /*

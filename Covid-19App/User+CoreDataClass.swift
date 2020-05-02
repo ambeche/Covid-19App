@@ -13,9 +13,9 @@ import CoreData
 
 public class User: NSManagedObject {
     class func checkUserExists (email: String, context: NSManagedObjectContext) throws -> Bool {
+        print("email existence checked for email, \(email)")
         let request: NSFetchRequest<User> = User.fetchRequest()
         request.predicate = NSPredicate(format: "email = %@", email)
-        
         do {
             let matchingUsers = try context.fetch(request)
             if matchingUsers.count == 0 {
@@ -61,6 +61,7 @@ public class User: NSManagedObject {
             print ("deleting user \(user.email ?? "no email found")")
             context.delete(user)
         }
+        try context.save()
     }
     
     class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws {
