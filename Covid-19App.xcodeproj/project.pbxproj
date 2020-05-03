@@ -31,6 +31,8 @@
 		F70D746E2452B9C3006B7008 /* NewsDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D746D2452B9C3006B7008 /* NewsDataFetcher.swift */; };
 		F70D74702452BA1B006B7008 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D746F2452BA1B006B7008 /* NewsData.swift */; };
 		F70D74722452BA8A006B7008 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D74712452BA8A006B7008 /* NewsTableViewCell.swift */; };
+		F735B7D4245F0C68009FD01C /* Debug.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F735B7D3245F0C68009FD01C /* Debug.storyboard */; };
+		F735B7D6245F0D4D009FD01C /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F735B7D5245F0D4D009FD01C /* DebugViewController.swift */; };
 		F77A2A072456F4DF00280660 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77A2A062456F4DF00280660 /* webViewController.swift */; };
 		F7908661245C2D6A003A4F1E /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7908660245C2D6A003A4F1E /* User+CoreDataProperties.swift */; };
 		F79818392458972500C0CC4A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79818382458972500C0CC4A /* Profile.storyboard */; };
@@ -96,6 +98,8 @@
 		F70D746D2452B9C3006B7008 /* NewsDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataFetcher.swift; sourceTree = "<group>"; };
 		F70D746F2452BA1B006B7008 /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 		F70D74712452BA8A006B7008 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		F735B7D3245F0C68009FD01C /* Debug.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Debug.storyboard; sourceTree = "<group>"; };
+		F735B7D5245F0D4D009FD01C /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		F77A2A062456F4DF00280660 /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		F7908660245C2D6A003A4F1E /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F79818382458972500C0CC4A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				6AA55ED42454DD90003585EA /* Covid19Data.swift */,
 				F79818462459616300C0CC4A /* HomeScreenViewController.swift */,
 				6ABCA9C72459658E00BBE3AD /* SymptomsViewController.swift */,
+				F735B7D5245F0D4D009FD01C /* DebugViewController.swift */,
 				6A7B73FC244853690096EE52 /* Assets.xcassets */,
 				6A7B7401244853690096EE52 /* Info.plist */,
 				6A7B73F9244853680096EE52 /* Covid_19App.xcdatamodeld */,
@@ -225,6 +230,7 @@
 				6A700085245850EF008A3314 /* HomeTab.storyboard */,
 				F79818382458972500C0CC4A /* Profile.storyboard */,
 				6ABCA9C5245964E700BBE3AD /* Symptoms.storyboard */,
+				F735B7D3245F0C68009FD01C /* Debug.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 				F79818392458972500C0CC4A /* Profile.storyboard in Resources */,
 				6A700086245850EF008A3314 /* HomeTab.storyboard in Resources */,
 				6A7B7400244853690096EE52 /* LaunchScreen.storyboard in Resources */,
+				F735B7D4245F0C68009FD01C /* Debug.storyboard in Resources */,
 				6AA55EC32451924B003585EA /* Statistics.storyboard in Resources */,
 				6A7B73FD244853690096EE52 /* Assets.xcassets in Resources */,
 				6A7B73F8244853680096EE52 /* Main.storyboard in Resources */,
@@ -383,6 +390,7 @@
 				F79818412458BCCE00C0CC4A /* LoginViewController.swift in Sources */,
 				F798183F2458BC0F00C0CC4A /* ProfileViewController.swift in Sources */,
 				6A700080245746FA008A3314 /* CountryDetailsViewController.swift in Sources */,
+				F735B7D6245F0D4D009FD01C /* DebugViewController.swift in Sources */,
 				F798186A2459BD0C00C0CC4A /* Symptom+CoreDataClass.swift in Sources */,
 				F7908661245C2D6A003A4F1E /* User+CoreDataProperties.swift in Sources */,
 				F70D746C2452B967006B7008 /* NewsTableViewController.swift in Sources */,

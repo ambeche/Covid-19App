@@ -100,16 +100,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    @IBAction func deleteAllUsersBtnPressed(_ sender: UIButton) {
-        do {
-            try User.deleteAllUsers(context: self.viewContext)
-            let covidDefaults = UserDefaults.standard
-            covidDefaults.removeObject(forKey: "loggedInUser")
-            pushToLoginScreen()
-        }catch let error as NSError {
-            print("Could not delete. \(error). \(error.userInfo)")
-        }
-    }
+
     
     @IBAction func listOfRegisteredUsersBtnPressed(_ sender: UIButton)
         {
