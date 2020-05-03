@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var loggedInUserEmailLabel: UILabel!
     @IBOutlet weak var statusColorLabel: UILabel!
     @IBOutlet weak var loggedInUserStatusLabel: UILabel!
+    @IBOutlet weak var symptomsRecordCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,8 @@ class ProfileViewController: UIViewController {
                 } else {
                     self.statusColorLabel.backgroundColor = UIColor.green
                 }
-                try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
+                let symptomSet = try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
+                self.symptomsRecordCountLabel.text = String(symptomSet.count)
             } catch let error as NSError {
                 print("Could not fetch user with email. \(error). \(error.userInfo)")
             }
@@ -94,7 +96,7 @@ class ProfileViewController: UIViewController {
         do {
             try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
         } catch let error as NSError {
-            print("Could not fetch user with email. \(error). \(error.userInfo)")
+            print("Could not fetch symptoms list for user. \(error). \(error.userInfo)")
         }
     }
     

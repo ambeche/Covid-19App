@@ -64,14 +64,25 @@ public class User: NSManagedObject {
         try context.save()
     }
     
-    class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws {
+    class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws -> Set<Symptom> {
         do {
             let targetObject = try fetchUserByEmail(email: email, context: context)
             if let symptomSet = targetObject.userHasSymptoms as? Set<Symptom>{
                 for symptom in symptomSet {
+                    print("Symptom Record")
                     print("\(symptom.time ?? "no time string found")")
+                    if let date = symptom.date {
+                        print("date: \(date)")
+                    }
+                    //print(" date: \(symptom.date ?? Date(timeIntervalSinceReferenceDate: 0))")
+                    if symptom.fever {
+                        print("fever recorded")
+                    }
                 }
+                return symptomSet
             }
+            let emptySymptomSet: Set<Symptom> = []
+            return emptySymptomSet
         } catch {
             throw error
         }

@@ -95,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="List of Registered Users">
+                                <state key="normal" title="Registered Users List">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -109,7 +109,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Your Record Symptoms">
+                                <state key="normal" title="Recorded Symptoms List">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -125,6 +125,9 @@
                                 <state key="normal" title="Record Symptoms">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="PBB-gR-8uZ" kind="show" id="lpP-Gs-J6y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFy-Jc-kVR">
                                 <rect key="frame" x="20" y="400" width="374" height="21"/>
@@ -186,11 +189,22 @@
                         <outlet property="loggedInUserStatusLabel" destination="vnx-JI-3FR" id="VUc-CZ-8yJ"/>
                         <outlet property="logoutBtn" destination="Q0q-1E-SG4" id="4Ei-TT-OK3"/>
                         <outlet property="statusColorLabel" destination="q7e-Vv-uKl" id="Ub8-rH-gd6"/>
+                        <outlet property="symptomsRecordCountLabel" destination="2Db-Bf-sio" id="M9X-JG-BFz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5z-Eh-Zd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2318.840579710145" y="122.54464285714285"/>
+        </scene>
+        <!--symptomsVC-->
+        <scene sceneID="uG2-Vz-zM7">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="symptomsVC" storyboardName="Symptoms" referencedIdentifier="symptomsVC" id="PBB-gR-8uZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YO5-b1-cYU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50t-r7-fEe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3118" y="-346"/>
         </scene>
         <!--Change Status-->
         <scene sceneID="4QP-ok-ffD">

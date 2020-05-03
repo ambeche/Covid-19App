@@ -60,8 +60,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         let passwordValid = self.isPasswordValid(password: self.passwordRegister.text!)
         if (nameValid && emailValid && passwordValid){
             saveUserData()
-            self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
             self.registerBtnErrorText.text = ""
+            self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
         } else {
             self.registerBtnErrorText.text = "One or more fields require your attention"
         }
