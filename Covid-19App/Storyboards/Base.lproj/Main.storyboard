@@ -29,6 +29,7 @@
                         <segue destination="zst-85-Jae" kind="relationship" relationship="viewControllers" id="T88-ua-6pX"/>
                         <segue destination="JAn-rT-xFR" kind="relationship" relationship="viewControllers" id="NxU-fR-0tC"/>
                         <segue destination="wfV-un-hoM" kind="relationship" relationship="viewControllers" id="t6d-UH-qz5"/>
+                        <segue destination="9lT-vw-s9J" kind="relationship" relationship="viewControllers" id="9Cb-S0-5vm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpu-Ea-xJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -44,6 +45,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejT-Q3-nNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1279.7101449275362" y="-1343.3035714285713"/>
+        </scene>
+        <!--debugVC-->
+        <scene sceneID="MEB-Fg-FAL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Debug" referencedIdentifier="debugVC" id="9lT-vw-s9J" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Aeo-qr-Vi6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOy-pH-Zgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167" y="-1586"/>
         </scene>
         <!--authVC-->
         <scene sceneID="ec7-O4-rNS">
