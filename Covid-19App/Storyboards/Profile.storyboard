@@ -160,7 +160,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="recordDefaultSymptomsBtnPressed:" destination="81v-4Q-F1B" eventType="touchUpInside" id="XxD-ES-zkz"/>
                                     <segue destination="ecm-x5-2AG" kind="show" id="WdT-lJ-3yy"/>
                                 </connections>
                             </button>

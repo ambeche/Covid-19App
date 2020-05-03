@@ -64,7 +64,7 @@ public class User: NSManagedObject {
         try context.save()
     }
     
-    class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws -> Set<Symptom> {
+    class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws -> Array<Symptom> {
         do {
             let targetObject = try fetchUserByEmail(email: email, context: context)
             if let symptomSet = targetObject.userHasSymptoms as? Set<Symptom>{
@@ -79,10 +79,14 @@ public class User: NSManagedObject {
                         print("fever recorded")
                     }
                 }
-                return symptomSet
+                var symptomArray = Array(symptomSet)
+                symptomArray = symptomArray.sorted(by: {
+                    $0.date!.compare($1.date!) == .orderedDescending
+                })
+                return symptomArray
             }
             let emptySymptomSet: Set<Symptom> = []
-            return emptySymptomSet
+            return Array(emptySymptomSet)
         } catch {
             throw error
         }

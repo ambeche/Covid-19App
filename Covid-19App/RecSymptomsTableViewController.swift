@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class RecSymptomsTableViewController: UITableViewController {
-        let statusArray: Array<String> = ["Healthy", "Quarantined", "Covid-19 +", "Recovered"]
-
+    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let statusArray: Array<String> = ["Healthy", "Quarantined", "Covid-19 +", "Recovered"]
+    var user: User?
+    var symptomArray: Array<Symptom>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +26,32 @@ class RecSymptomsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let covidDefaults = UserDefaults.standard
+        if (covidDefaults.string(forKey: "loggedInUser") == nil) {
+        pushToLoginScreen()
+        } else {
+            guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
+                return
+            }
+            do {
+                //self.user = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
+                self.symptomArray = try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: viewContext)
+                
+            } catch let error as NSError {
+                print("Could not fetch symptoms for user. \(error). \(error.userInfo)")
+            }
+        }
+    }
+    
+    func pushToLoginScreen () {
+        print("pushToLoginScreen called")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "auth", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "authVC") as! LoginViewController
+                //self.present(newViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(newViewController, animated: true)
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -30,7 +60,7 @@ class RecSymptomsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return self.symptomArray!.count
     }
 
     
@@ -38,11 +68,15 @@ class RecSymptomsTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "symtomTableViewCell", for: indexPath) as? RecSymptomsTableViewCell else{
             fatalError("The dequeued cell is not an instance of RecSymptomsTableViewCell")
         }
-        
+        guard let targetSymptom = self.symptomArray?[indexPath.row] else {
+            fatalError("symptom not found in fetched results")
+        }
+        var yCord = 37
+        // Configure the cell...
         //Date text label config
         let dateLabel = UILabel()
         dateLabel.frame = CGRect(x: 20, y: 11, width: 374, height: 21)
-        let currentDate = Date()
+        let currentDate = targetSymptom.date!
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
@@ -53,62 +87,94 @@ class RecSymptomsTableViewController: UITableViewController {
         cell.symptomContentView.addSubview(dateLabel)
         
         //Fever text label config
-        let feverLabel = UILabel()
-        feverLabel.frame = CGRect(x: 20, y: 37, width: 374, height: 21)
-        feverLabel.text = "🤒 Fever"
-        cell.symptomContentView.addSubview(feverLabel)
+        if (targetSymptom.fever) {
+            let feverLabel = UILabel()
+            feverLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
+            feverLabel.text = "🤒 Fever"
+            cell.symptomContentView.addSubview(feverLabel)
+            yCord += 23
+        }
         
         //Cough text label config
-        let coughLabel = UILabel()
-        coughLabel.frame = CGRect(x: 20, y: 60, width: 374, height: 21)
-        coughLabel.text = "😷 Cough"
-        cell.symptomContentView.addSubview(coughLabel)
+        if (targetSymptom.cough) {
+            let coughLabel = UILabel()
+            coughLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
+            coughLabel.text = "😷 Cough"
+            cell.symptomContentView.addSubview(coughLabel)
+            yCord += 23
+        }
         
         //Breathing Difficulties text label config
-        let breathDiffLabel = UILabel()
-        breathDiffLabel.frame = CGRect(x: 20, y: 83, width: 374, height: 21)
-        breathDiffLabel.text = "🤢 Breathing Difficulties"
-        cell.symptomContentView.addSubview(breathDiffLabel)
+        if (targetSymptom.breathing) {
+            let breathDiffLabel = UILabel()
+            breathDiffLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
+            breathDiffLabel.text = "🤢 Breathing Difficulties"
+            cell.symptomContentView.addSubview(breathDiffLabel)
+            yCord += 23
+        }
         
         //Muscle Pain text label config
-        let musclePainLabel = UILabel()
-        musclePainLabel.frame = CGRect(x: 20, y: 106, width: 374, height: 21)
-        musclePainLabel.text = "🥵 Muscle Pain"
-        cell.symptomContentView.addSubview(musclePainLabel)
+        if (targetSymptom.muscle) {
+            let musclePainLabel = UILabel()
+            musclePainLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
+            musclePainLabel.text = "🥵 Muscle Pain"
+            cell.symptomContentView.addSubview(musclePainLabel)
+            yCord += 23
+        }
         
         //Sore Throat text label config
-        let soreThroatLabel = UILabel()
-        soreThroatLabel.frame = CGRect(x: 20, y: 129, width: 374, height: 21)
-        soreThroatLabel.text = "🤧 Sore Throat"
-        cell.symptomContentView.addSubview(soreThroatLabel)
+        if (targetSymptom.throat) {
+            let soreThroatLabel = UILabel()
+            soreThroatLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
+            soreThroatLabel.text = "🤧 Sore Throat"
+            cell.symptomContentView.addSubview(soreThroatLabel)
+            yCord += 23
+        }
         
         //Chills text label config
-        let chillsLabel = UILabel()
-        chillsLabel.frame = CGRect(x: 20, y: 152, width: 374, height: 21)
-        chillsLabel.text = "🥶 Chills"
-        cell.symptomContentView.addSubview(chillsLabel)
-        
+        if (targetSymptom.chills) {
+            let chillsLabel = UILabel()
+            chillsLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
+            chillsLabel.text = "🥶 Chills"
+            cell.symptomContentView.addSubview(chillsLabel)
+            yCord += 23
+        }
         
         //Headache text label config
-        let headacheLabel = UILabel()
-        headacheLabel.frame = CGRect(x: 20, y: 175, width: 374, height: 21)
-        headacheLabel.text = "🤕 Headache"
-        cell.symptomContentView.addSubview(headacheLabel)
+        if (targetSymptom.headache) {
+            let headacheLabel = UILabel()
+            headacheLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
+            headacheLabel.text = "🤕 Headache"
+            cell.symptomContentView.addSubview(headacheLabel)
+            yCord += 23
+        }
         
         //Loss of Taste or Smell
-        let lossOfTasSmellLabel = UILabel()
-        lossOfTasSmellLabel.frame = CGRect(x: 20, y: 198, width: 374, height: 21)
-        lossOfTasSmellLabel.text = "🤮 Loss of Taste or Smell"
-        cell.symptomContentView.addSubview(lossOfTasSmellLabel)
-        
-        
-        // Configure the cell...
+        if (targetSymptom.taste) {
+            let lossOfTasSmellLabel = UILabel()
+            lossOfTasSmellLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
+            lossOfTasSmellLabel.text = "🤮 Loss of Taste or Smell"
+            cell.symptomContentView.addSubview(lossOfTasSmellLabel)
+        }
         return cell
     }
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        var height: CGFloat = 40
+        guard let targetSymptom = self.symptomArray?[indexPath.row] else {
+            fatalError("symptom not found in fetched results")
+        }
+        if (targetSymptom.fever) {height += 25}
+        if (targetSymptom.cough) {height += 25}
+        if (targetSymptom.breathing) {height += 25}
+        if (targetSymptom.muscle) {height += 25}
+        if (targetSymptom.throat) {height += 25}
+        if (targetSymptom.chills) {height += 25}
+        if (targetSymptom.headache) {height += 25}
+        if (targetSymptom.taste) {height += 25}
+        
+        return height
     }
 
     /*
