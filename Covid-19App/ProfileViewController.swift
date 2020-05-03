@@ -70,23 +70,23 @@ class ProfileViewController: UIViewController {
         pushToLoginScreen()
     }
 
-    @IBAction func recordDefaultSymptomsBtnPressed(_ sender: UIButton) {
-        let covidDefaults = UserDefaults.standard
-        guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
-            return
-        }
-        do {
-            let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
-            let symptom1 = Symptom(context: self.viewContext)
-            symptom1.time = "number1"
-            symptom1.symptomBelongToUser = loggedInUser
-            let symptom2 = Symptom(context: self.viewContext)
-            symptom2.time = "number2"
-            symptom2.symptomBelongToUser = loggedInUser
-        } catch let error as NSError {
-            print("Could not fetch user with email. \(error). \(error.userInfo)")
-        }
-    }
+//    @IBAction func recordDefaultSymptomsBtnPressed(_ sender: UIButton) {
+//        let covidDefaults = UserDefaults.standard
+//        guard let loggedInUserEmail = covidDefaults.string(forKey: "loggedInUser") else {
+//            return
+//        }
+//        do {
+//            let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
+//            let symptom1 = Symptom(context: self.viewContext)
+//            symptom1.time = "number1"
+//            symptom1.symptomBelongToUser = loggedInUser
+//            let symptom2 = Symptom(context: self.viewContext)
+//            symptom2.time = "number2"
+//            symptom2.symptomBelongToUser = loggedInUser
+//        } catch let error as NSError {
+//            print("Could not fetch user with email. \(error). \(error.userInfo)")
+//        }
+//    }
     
     @IBAction func listOfRecordedSymptomsBtnPressed(_ sender: UIButton) {
         let covidDefaults = UserDefaults.standard
@@ -103,6 +103,9 @@ class ProfileViewController: UIViewController {
     @IBAction func deleteAllUsersBtnPressed(_ sender: UIButton) {
         do {
             try User.deleteAllUsers(context: self.viewContext)
+            let covidDefaults = UserDefaults.standard
+            covidDefaults.removeObject(forKey: "loggedInUser")
+            pushToLoginScreen()
         }catch let error as NSError {
             print("Could not delete. \(error). \(error.userInfo)")
         }
