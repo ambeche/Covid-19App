@@ -13,7 +13,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var loggedInUserNameLabel: UILabel!
     @IBOutlet weak var logoutBtn: UIButton!
     @IBOutlet weak var loggedInUserEmailLabel: UILabel!
+    @IBOutlet weak var statusColorLabel: UILabel!
     @IBOutlet weak var loggedInUserStatusLabel: UILabel!
+    @IBOutlet weak var symptomsRecordCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +32,20 @@ class ProfileViewController: UIViewController {
             }
             do {
                 let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
-                loggedInUserEmailLabel.text = loggedInUser.name
-                loggedInUserNameLabel.text = loggedInUser.email
+                loggedInUserEmailLabel.text = loggedInUser.email
+                loggedInUserNameLabel.text = loggedInUser.name
                 loggedInUserStatusLabel.text = loggedInUser.status
-                try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
+                if loggedInUser.status == "Healthy" {
+                    self.statusColorLabel.backgroundColor = UIColor.blue
+                } else if loggedInUser.status == "Quarantined" {
+                    self.statusColorLabel.backgroundColor = UIColor.orange
+                } else if loggedInUser.status == "Covid-19 +" {
+                    self.statusColorLabel.backgroundColor = UIColor.red
+                } else {
+                    self.statusColorLabel.backgroundColor = UIColor.green
+                }
+                let symptomSet = try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
+                self.symptomsRecordCountLabel.text = String(symptomSet.count)
             } catch let error as NSError {
                 print("Could not fetch user with email. \(error). \(error.userInfo)")
             }
@@ -84,7 +96,7 @@ class ProfileViewController: UIViewController {
         do {
             try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
         } catch let error as NSError {
-            print("Could not fetch user with email. \(error). \(error.userInfo)")
+            print("Could not fetch symptoms list for user. \(error). \(error.userInfo)")
         }
     }
     

@@ -13,9 +13,9 @@ import CoreData
 
 public class User: NSManagedObject {
     class func checkUserExists (email: String, context: NSManagedObjectContext) throws -> Bool {
+        print("email existence checked for email, \(email)")
         let request: NSFetchRequest<User> = User.fetchRequest()
         request.predicate = NSPredicate(format: "email = %@", email)
-        
         do {
             let matchingUsers = try context.fetch(request)
             if matchingUsers.count == 0 {
@@ -61,16 +61,28 @@ public class User: NSManagedObject {
             print ("deleting user \(user.email ?? "no email found")")
             context.delete(user)
         }
+        try context.save()
     }
     
-    class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws {
+    class func fetchAllSymptomsForUser (email: String, context: NSManagedObjectContext) throws -> Set<Symptom> {
         do {
             let targetObject = try fetchUserByEmail(email: email, context: context)
             if let symptomSet = targetObject.userHasSymptoms as? Set<Symptom>{
                 for symptom in symptomSet {
+                    print("Symptom Record")
                     print("\(symptom.time ?? "no time string found")")
+                    if let date = symptom.date {
+                        print("date: \(date)")
+                    }
+                    //print(" date: \(symptom.date ?? Date(timeIntervalSinceReferenceDate: 0))")
+                    if symptom.fever {
+                        print("fever recorded")
+                    }
                 }
+                return symptomSet
             }
+            let emptySymptomSet: Set<Symptom> = []
+            return emptySymptomSet
         } catch {
             throw error
         }
