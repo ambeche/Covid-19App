@@ -1,7 +1,7 @@
 //
 //  LoginViewController.swift
 //  Covid-19App
-//
+//  Typical login screen for logging in registered users (rafei)
 //  Created by Rafe Ibrahim on 28.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //

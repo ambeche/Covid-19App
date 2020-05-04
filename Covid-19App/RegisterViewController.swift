@@ -1,7 +1,7 @@
 //
 //  RegisterViewController.swift
 //  Covid-19App
-//
+//  Typical registration screen to register new users to app. Validation for input fields also implemented here. (rafei)
 //  Created by Rafe Ibrahim on 30.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //
@@ -31,6 +31,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         print("saveUserData to function called")
         do {
             if (try !User.checkUserExists(email: emailRegister.text ?? "", context: self.viewContext)) {
+                // created person class instance for future development
+                _ = Person(name: nameRegister.text!, email: emailRegister.text!, password: passwordRegister.text!, status: "Healthy")
                 let newUser = User(context: self.viewContext)
                 newUser.name = nameRegister.text
                 newUser.email = emailRegister.text
@@ -118,20 +120,20 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     // created for future functionalities like authentication
     
     @IBAction func nameDidEndEditing(_ sender: UITextField) {
-        self.isFullNameValid(fullName: self.nameRegister.text!)
+       _ = self.isFullNameValid(fullName: self.nameRegister.text!)
     }
     
     @IBAction func registerEmailDidEndEditing(_ sender: UITextField) {
-        self.isEmailValid(email: emailRegister.text!)
+       _ = self.isEmailValid(email: emailRegister.text!)
     }
     
     @IBAction func registerPasswordDidEndEditing(_ sender: UITextField) {
-        self.isPasswordValid(password: self.passwordRegister.text!)
+       _ = self.isPasswordValid(password: self.passwordRegister.text!)
     }
     
     
     @IBAction func confirmPasswordDidEndEditing(_ sender: UITextField) {
-            self.isPasswordValid(password: self.passwordRegister.text!)
+        _ = self.isPasswordValid(password: self.passwordRegister.text!)
     }
     
     /*

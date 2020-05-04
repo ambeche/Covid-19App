@@ -1,7 +1,7 @@
 //
 //  SymptomsViewController.swift
 //  Covid-19App
-//
+//  Screen for recording symptom data (rafei)
 //  Created by iosdev on 29.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //
@@ -54,6 +54,8 @@ class SymptomsViewController: UIViewController {
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
             if let targetUser = self.user {
+                // Created instance of SymptomSet for future development
+                _ = SymptomSet(fever: self.feverSwitch.isOn, cough: self.coughSwitch.isOn, breathingDifficulties: self.breathDiffSwitch.isOn, musclePain: self.musclePainSwitch.isOn, soreThroat: self.soreThroatSwitch.isOn, chills: self.chillsSwitch.isOn, headache: self.headacheSwitch.isOn, lossTasteSmell: self.lossTasteSmellSwitch.isOn)
                 let symptomRecordToAdd = Symptom(context: self.viewContext)
                 symptomRecordToAdd.date = Date()
                 symptomRecordToAdd.fever = self.feverSwitch.isOn

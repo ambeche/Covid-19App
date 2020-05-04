@@ -1,7 +1,7 @@
 //
 //  RecSymptomsTableViewController.swift
 //  Covid-19App
-//
+//  Class created for displaying recorded symptoms of logged in user (rafei)
 //  Created by Rafe Ibrahim on 29.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //
