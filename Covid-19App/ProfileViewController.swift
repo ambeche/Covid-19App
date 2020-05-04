@@ -1,7 +1,7 @@
 //
 //  ProfileViewController.swift
 //  Covid-19App
-//
+//  For controlling profile screen which displays personal details of logged in user and buttons to navigate to registered users table, recorded symptoms table, change status screens (rafei)
 //  Created by Rafe Ibrahim on 28.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //
@@ -94,7 +94,7 @@ class ProfileViewController: UIViewController {
             return
         }
         do {
-            try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
+            _ = try User.fetchAllSymptomsForUser(email: loggedInUserEmail, context: self.viewContext)
         } catch let error as NSError {
             print("Could not fetch symptoms list for user. \(error). \(error.userInfo)")
         }
@@ -105,7 +105,7 @@ class ProfileViewController: UIViewController {
     @IBAction func listOfRegisteredUsersBtnPressed(_ sender: UIButton)
         {
             do {
-                try User.fetchAllUsers(context: self.viewContext)
+                _ = try User.fetchAllUsers(context: self.viewContext)
             } catch let error as NSError {
                 print("Could not save. \(error). \(error.userInfo)")
             }

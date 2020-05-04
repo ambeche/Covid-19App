@@ -1,7 +1,7 @@
 //
 //  UsersTableViewCell.swift
 //  Covid-19App
-//
+//  Class created for protoType cell of Registered users table. (rafei)
 //  Created by Rafe Ibrahim on 3.5.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //

@@ -1,7 +1,7 @@
 //
 //  webViewController.swift
 //  Covid-19App
-//
+//  Class created to display web view of news articles fetched from NewsAPI. (rafei)
 //  Created by Rafe Ibrahim on 27.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //

@@ -1,7 +1,7 @@
 //
 //  DebugViewController.swift
 //  Covid-19App
-//
+//  Screen for giving debug functionality to tester e.g. tester can delete all registered users etc. (rafei)
 //  Created by Rafe Ibrahim on 3.5.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //

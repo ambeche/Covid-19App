@@ -1,7 +1,7 @@
 //
 //  ChangeStatusViewController.swift
 //  Covid-19App
-//
+//  Screen with pickerView to allow logged in user to change his / her status (rafei)
 //  Created by Rafe Ibrahim on 2.5.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //

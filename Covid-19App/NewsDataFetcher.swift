@@ -1,7 +1,7 @@
 //
 //  NewsDataFetcher.swift
 //  Covid-19App
-//
+//  Class created to fetch json data from News API and decode it using NewsData.swift file (rafei)
 //  Created by Rafe Ibrahim on 24.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //
