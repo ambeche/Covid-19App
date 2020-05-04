@@ -46,12 +46,13 @@ public class User: NSManagedObject {
         }
     }
     
-    class func fetchAllUsers (context: NSManagedObjectContext) throws {
+    class func fetchAllUsers (context: NSManagedObjectContext) throws -> Array<User> {
         let usersRequest: NSFetchRequest<User> = User.fetchRequest()
         let users = try context.fetch(usersRequest)
         for user in users {
             print ("user email \(user.email ?? "no email found")")
         }
+        return users
     }
     
     class func deleteAllUsers (context: NSManagedObjectContext) throws {
