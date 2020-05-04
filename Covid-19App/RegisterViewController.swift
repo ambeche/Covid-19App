@@ -64,7 +64,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
         } else {
             self.registerBtnErrorText.text = "One or more fields require your attention"
-        }
+        }; registerBtnErrorText.text = NSLocalizedString("One or more fields require your attention", comment: "registerButtonErrorText");
     }
     
     func isEmailValid(email: String) -> Bool {
@@ -104,6 +104,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     func isPasswordValid(password: String) -> Bool {
         if (password.count <= 5) {
             self.passwordErrorText.text = "Password length must be greater than 5"
+            passwordErrorText.text = NSLocalizedString("Password length must be greater than 5", comment: "PasswordErrorText");
             return false
         }
         if (self.passwordRegister.text != self.confirmPasswordRegister.text){
