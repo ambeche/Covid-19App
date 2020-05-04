@@ -24,7 +24,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
     @IBOutlet weak var gCritical: UILabel!
     
     
-    let apiUrl = "https://corona-api.com/countries"
+    let apiUrl = "https://corona-api.com/countries?include=timeline"
     var covid19Fetcher = Covid19APPI()
     private var covidStatistics = [Country]()
     private var isloading = true
@@ -74,15 +74,6 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
         fatalError("invalid cell type.")
     }
     
-    //let countryData: String
-    
-    
-    /*if isfiltering(){
-        countryData = filteredCountryNames[indexPath.row]
-    }
-    else {
-        countryData = countryNames[indexPath.row]
-    }*/
     var stats: Country
     if !isloading {
         if isfiltering(){

@@ -74,7 +74,7 @@ class HomeScreenViewController: UIViewController, Covid19APIDelegate, ChartViewD
         pieChart.drawHoleEnabled = false
         pieChart.rotationAngle = 180
         pieChart.noDataText = "loading"
-        pieChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
+        pieChart.animate(xAxisDuration: 1.50, yAxisDuration: 1.50, easingOption: .easeInBounce)
         pieChart.chartDescription?.enabled = false
         pieChart.data  = PieChartData(dataSet: dataSet )
     }
@@ -92,7 +92,7 @@ class HomeScreenViewController: UIViewController, Covid19APIDelegate, ChartViewD
         
         lineChart.frame = CGRect(x: 0, y: 0, width: 350, height: 250 )
         lineChart.center = CGPoint(x: 185, y:570)
-        lineChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
+        lineChart.animate(xAxisDuration: 1.50, yAxisDuration: 1.50, easingOption: .easeInBounce)
         lineChart.noDataText = "loading"
         lineChart.chartDescription?.text = "Infection Timeline"
         lineChart.chartDescription?.position = CGPoint(x: 220, y: 50)
