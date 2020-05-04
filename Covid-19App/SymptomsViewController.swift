@@ -61,7 +61,7 @@ class SymptomsViewController: UIViewController {
                 symptomRecordToAdd.breathing = self.breathDiffSwitch.isOn
                 symptomRecordToAdd.muscle = self.musclePainSwitch.isOn
                 symptomRecordToAdd.throat = self.soreThroatSwitch.isOn
-                symptomRecordToAdd.chills = self.coughSwitch.isOn
+                symptomRecordToAdd.chills = self.chillsSwitch.isOn
                 symptomRecordToAdd.headache = self.headacheSwitch.isOn
                 symptomRecordToAdd.taste = self.lossTasteSmellSwitch.isOn
                 //adding test string for testing
