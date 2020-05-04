@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "cVallue"; ObjectID = "08C-0I-dfj"; */
+"08C-0I-dfj.text" = "cVallue";
+
+/* Class = "UILabel"; text = "rValue"; ObjectID = "7Qm-D5-MEM"; */
+"7Qm-D5-MEM.text" = "rValue";
+
+/* Class = "UILabel"; text = "crValue"; ObjectID = "J4w-Eq-XBS"; */
+"J4w-Eq-XBS.text" = "crValue";
+
+/* Class = "UIViewController"; title = "HomeScreen"; ObjectID = "J75-Lh-Mzj"; */
+"J75-Lh-Mzj.title" = "Aloitusnäyttö";
+
+/* Class = "UILabel"; text = "Global Statistics"; ObjectID = "Oqr-mw-tbs"; */
+"Oqr-mw-tbs.text" = "Maailmanlaajuiset tilastot";
+
+/* Class = "UILabel"; text = "Confirmed"; ObjectID = "bh4-jn-ZkJ"; */
+"bh4-jn-ZkJ.text" = "Vahvisteut";
+
+/* Class = "UILabel"; text = "Recovered"; ObjectID = "e5i-6V-mX8"; */
+"e5i-6V-mX8.text" = "Toipuneet";
+
+/* Class = "UILabel"; text = "dValue"; ObjectID = "eji-GY-ltk"; */
+"eji-GY-ltk.text" = "dValue";
+
+/* Class = "UILabel"; text = "Deaths"; ObjectID = "fm1-Ra-tt2"; */
+"fm1-Ra-tt2.text" = "Kuolemat";
+
+/* Class = "UILabel"; text = "Intensive Care"; ObjectID = "pzN-Ue-52G"; */
+"pzN-Ue-52G.text" = "Tehohoito";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "vfq-2D-x8b"; */
+"vfq-2D-x8b.title" = "Koti";

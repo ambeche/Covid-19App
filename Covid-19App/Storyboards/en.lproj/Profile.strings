@@ -1,0 +1,90 @@
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "1Jy-lA-9KF"; */
+"1Jy-lA-9KF.title" = "Profile";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "2Db-Bf-sio"; */
+"2Db-Bf-sio.text" = "5";
+
+/* Class = "UIViewController"; title = "Profile"; ObjectID = "81v-4Q-F1B"; */
+"81v-4Q-F1B.title" = "Profile";
+
+/* Class = "UINavigationItem"; title = "Recorded Symptoms"; ObjectID = "8Jq-IJ-uYe"; */
+"8Jq-IJ-uYe.title" = "Recorded Symptoms";
+
+/* Class = "UINavigationItem"; title = "Change Status"; ObjectID = "FHq-uN-ASn"; */
+"FHq-uN-ASn.title" = "Change Status";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "FtJ-Mn-idx"; */
+"FtJ-Mn-idx.text" = "Status:";
+
+/* Class = "UILabel"; text = "User Name"; ObjectID = "IIX-ug-hAg"; */
+"IIX-ug-hAg.text" = "User Name";
+
+/* Class = "UILabel"; text = "Email: "; ObjectID = "P6Q-6C-f4D"; */
+"P6Q-6C-f4D.text" = "Email: ";
+
+/* Class = "UIButton"; normalTitle = "LOGOUT "; ObjectID = "Q0q-1E-SG4"; */
+"Q0q-1E-SG4.normalTitle" = "LOGOUT ";
+
+/* Class = "UIButton"; normalTitle = "👉 Record Symptoms 🩺"; ObjectID = "Qay-Ww-CLK"; */
+"Qay-Ww-CLK.normalTitle" = "👉 Record Symptoms 🩺";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "R1D-wM-9G4"; */
+"R1D-wM-9G4.text" = "Email:";
+
+/* Class = "UIButton"; normalTitle = "👉 Symptoms Data 📕"; ObjectID = "TqT-t4-3iN"; */
+"TqT-t4-3iN.normalTitle" = "👉 Symptoms Data 📕";
+
+/* Class = "UILabel"; text = "Personal Details"; ObjectID = "Tr8-EM-lvr"; */
+"Tr8-EM-lvr.text" = "Personal Details";
+
+/* Class = "UIButton"; normalTitle = "Save Status"; ObjectID = "UvX-nf-hyj"; */
+"UvX-nf-hyj.normalTitle" = "Save Status";
+
+/* Class = "UILabel"; text = "COVID-19 APP"; ObjectID = "X2y-mt-Bo0"; */
+"X2y-mt-Bo0.text" = "COVID-19 APP";
+
+/* Class = "UILabel"; text = "Status:"; ObjectID = "a8L-Pd-U31"; */
+"a8L-Pd-U31.text" = "Status:";
+
+/* Class = "UILabel"; text = "User Email"; ObjectID = "bfv-Wm-9qg"; */
+"bfv-Wm-9qg.text" = "User Email";
+
+/* Class = "UILabel"; text = "User Email"; ObjectID = "cUH-xR-C6N"; */
+"cUH-xR-C6N.text" = "User Email";
+
+/* Class = "UINavigationItem"; title = "Registered Users"; ObjectID = "cVK-7x-hTK"; */
+"cVK-7x-hTK.title" = "Registered Users";
+
+/* Class = "UILabel"; text = "User Status"; ObjectID = "f5d-Z0-4Y9"; */
+"f5d-Z0-4Y9.text" = "User Status";
+
+/* Class = "UIButton"; normalTitle = "👉Look Out For Other Users 👀"; ObjectID = "kJd-Ew-Xsm"; */
+"kJd-Ew-Xsm.normalTitle" = "👉Look Out For Other Users 👀";
+
+/* Class = "UILabel"; text = "Current Status: "; ObjectID = "leW-Q4-9ru"; */
+"leW-Q4-9ru.text" = "Current Status: ";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "mFE-O8-zLc"; */
+"mFE-O8-zLc.text" = "Name:";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "mKi-N2-xxO"; */
+"mKi-N2-xxO.text" = "Name:";
+
+/* Class = "UILabel"; text = "Symptoms Record Count:"; ObjectID = "pie-1j-V8z"; */
+"pie-1j-V8z.text" = "Symptoms Record Count:";
+
+/* Class = "UIButton"; normalTitle = " 👉 Change Your Status 🤔"; ObjectID = "sdC-pC-H0r"; */
+"sdC-pC-H0r.normalTitle" = " 👉 Change Your Status 🤔";
+
+/* Class = "UILabel"; text = "User Status"; ObjectID = "tBI-XM-Fzn"; */
+"tBI-XM-Fzn.text" = "User Status";
+
+/* Class = "UILabel"; text = "User Status"; ObjectID = "vnx-JI-3FR"; */
+"vnx-JI-3FR.text" = "User Status";
+
+/* Class = "UILabel"; text = "User Name"; ObjectID = "xBG-QF-b7s"; */
+"xBG-QF-b7s.text" = "User Name";
+
+/* Class = "UILabel"; text = "Select Status To Change"; ObjectID = "xm6-sm-JFz"; */
+"xm6-sm-JFz.text" = "Select Status To Change";

@@ -1,0 +1,16 @@
+/* 
+  localizable.strings
+  Covid-19App
+
+  Created by iosdev on 4.5.2020.
+  Copyright © 2020 Covid-19App. All rights reserved.
+*/
+
+
+//comment: "selectNewsCell"
+"Unexpected sender:"="Odottamaton lähettäjä:";
+//comment: "registerButtonErrorText
+"One or more fields require your attention" = "Vielä yksi kenttä tarvitsee täyttää";
+ // comment: "PasswordErrorText
+"Password length must be greater than 5"="Salasanan pituus täytyy olla suurempi kuin 5 merkkiä";
+

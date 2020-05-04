@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "6iD-PZ-o6s"; */
+"6iD-PZ-o6s.title" = "Uutiset";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Sb1-US-mpT"; */
+"Sb1-US-mpT.text" = "Kehys";
+
+/* Class = "UILabel"; text = "news Description"; ObjectID = "dz4-7a-xyV"; */
+"dz4-7a-xyV.text" = "Uutisten kuvaus";
+
+/* Class = "UIBarButtonItem"; title = "Profile"; ObjectID = "veW-2I-caF"; */
+"veW-2I-caF.title" = "Profiili";
+
+/* Class = "UINavigationItem"; title = "Corona News"; ObjectID = "xiW-Pp-JoD"; */
+"xiW-Pp-JoD.title" = "Korona uutiset";

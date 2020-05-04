@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "🤧 Sore Throat"; ObjectID = "3OT-4v-Ib9"; */
+"3OT-4v-Ib9.text" = "🤧 Kurkkukipu";
+
+/* Class = "UILabel"; text = "🥵 Muscle Pain"; ObjectID = "NYZ-fH-39x"; */
+"NYZ-fH-39x.text" = "🥵 Lihaskipu";
+
+/* Class = "UILabel"; text = "🤢 Breathing Difficulties"; ObjectID = "O8c-zK-Oi5"; */
+"O8c-zK-Oi5.text" = "🤢 Hengitysongelmia";
+
+/* Class = "UILabel"; text = "🤕 Headache"; ObjectID = "QkK-0j-akU"; */
+"QkK-0j-akU.text" = "🤕 Päänsärky";
+
+/* Class = "UILabel"; text = "PLEASE REPORT YOUR SYMPTOMS"; ObjectID = "dNl-oB-Wdb"; */
+"dNl-oB-Wdb.text" = "RAPORTOI OIREESI";
+
+/* Class = "UILabel"; text = "😷 Cough"; ObjectID = "fah-Fz-C8d"; */
+"fah-Fz-C8d.text" = "😷 Yskä";
+
+/* Class = "UIButton"; normalTitle = "Save 🩺"; ObjectID = "sld-wm-KMK"; */
+"sld-wm-KMK.normalTitle" = "Tallenna 🩺";
+
+/* Class = "UILabel"; text = "🤮 Loss of Taste / Smell"; ObjectID = "tB5-0C-HNK"; */
+"tB5-0C-HNK.text" = "🤮 Haju- tai makuaistin menetys";
+
+/* Class = "UILabel"; text = "🤒 Fever"; ObjectID = "uAG-ZW-mKJ"; */
+"uAG-ZW-mKJ.text" = "🤒 Kuume";
+
+/* Class = "UILabel"; text = "🥶 Chills"; ObjectID = "xmt-lN-QLb"; */
+"xmt-lN-QLb.text" = "🥶 Vilunväristykset";

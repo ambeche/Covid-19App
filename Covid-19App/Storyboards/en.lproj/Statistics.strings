@@ -1,0 +1,81 @@
+
+/* Class = "UILabel"; text = "cValue"; ObjectID = "0zu-xg-jsx"; */
+"0zu-xg-jsx.text" = "cValue";
+
+/* Class = "UILabel"; text = "rValue"; ObjectID = "Ay3-Xe-NaN"; */
+"Ay3-Xe-NaN.text" = "rValue";
+
+/* Class = "UILabel"; text = "Critical"; ObjectID = "CPZ-hP-nME"; */
+"CPZ-hP-nME.text" = "Critical";
+
+/* Class = "UILabel"; text = "crValue"; ObjectID = "Duq-8U-tUm"; */
+"Duq-8U-tUm.text" = "crValue";
+
+/* Class = "UILabel"; text = "Recovered"; ObjectID = "EjK-N5-Aeh"; */
+"EjK-N5-Aeh.text" = "Recovered";
+
+/* Class = "UILabel"; text = "Last updated : "; ObjectID = "Eo9-cB-V27"; */
+"Eo9-cB-V27.text" = "Last updated : ";
+
+/* Class = "UILabel"; text = "Recovered"; ObjectID = "HO6-rq-psd"; */
+"HO6-rq-psd.text" = "Recovered";
+
+/* Class = "UILabel"; text = "Today's Cases"; ObjectID = "LZJ-rF-fAp"; */
+"LZJ-rF-fAp.text" = "Today's Cases";
+
+/* Class = "UILabel"; text = "Infected"; ObjectID = "URA-N5-MOw"; */
+"URA-N5-MOw.text" = "Infected";
+
+/* Class = "UILabel"; text = "Death Rate"; ObjectID = "V5t-J7-wrH"; */
+"V5t-J7-wrH.text" = "Death Rate";
+
+/* Class = "UILabel"; text = "Fatalities"; ObjectID = "YBy-oe-f70"; */
+"YBy-oe-f70.text" = "Fatalities";
+
+/* Class = "UITabBarItem"; title = "Statistics"; ObjectID = "YbV-gl-LOi"; */
+"YbV-gl-LOi.title" = "Statistics";
+
+/* Class = "UIViewController"; title = "CountryDetails"; ObjectID = "a93-av-y9h"; */
+"a93-av-y9h.title" = "CountryDetails";
+
+/* Class = "UILabel"; text = "dvalue"; ObjectID = "c6n-LG-ZR5"; */
+"c6n-LG-ZR5.text" = "dvalue";
+
+/* Class = "UINavigationItem"; title = "Statistics"; ObjectID = "dK7-wR-vDs"; */
+"dK7-wR-vDs.title" = "Statistics";
+
+/* Class = "UILabel"; text = "drValue"; ObjectID = "f3V-9w-Ews"; */
+"f3V-9w-Ews.text" = "drValue";
+
+/* Class = "UILabel"; text = "rrValue"; ObjectID = "g7q-gu-WeX"; */
+"g7q-gu-WeX.text" = "rrValue";
+
+/* Class = "UISegmentedControl"; i0p-d3-hXk.segmentTitles[0] = "Most Cases"; ObjectID = "i0p-d3-hXk"; */
+"i0p-d3-hXk.segmentTitles[0]" = "Most Cases";
+
+/* Class = "UISegmentedControl"; i0p-d3-hXk.segmentTitles[1] = "Least  Cases"; ObjectID = "i0p-d3-hXk"; */
+"i0p-d3-hXk.segmentTitles[1]" = "Least  Cases";
+
+/* Class = "UILabel"; text = "Deaths"; ObjectID = "mL7-Re-gpD"; */
+"mL7-Re-gpD.text" = "Deaths";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "mht-7D-Km8"; */
+"mht-7D-Km8.text" = "Country";
+
+/* Class = "UITableViewController"; title = "Statistics"; ObjectID = "nn5-wV-OHi"; */
+"nn5-wV-OHi.title" = "Statistics";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "rEW-Sh-VyC"; */
+"rEW-Sh-VyC.text" = "Country";
+
+/* Class = "UILabel"; text = "Recovery Rate"; ObjectID = "sdo-Xt-eLF"; */
+"sdo-Xt-eLF.text" = "Recovery Rate";
+
+/* Class = "UILabel"; text = "tdValue"; ObjectID = "sgY-iB-RpH"; */
+"sgY-iB-RpH.text" = "tdValue";
+
+/* Class = "UILabel"; text = "Confirmed"; ObjectID = "w62-1u-RCE"; */
+"w62-1u-RCE.text" = "Confirmed";
+
+/* Class = "UILabel"; text = "tcValue"; ObjectID = "zQ9-l5-Ni4"; */
+"zQ9-l5-Ni4.text" = "tcValue";
