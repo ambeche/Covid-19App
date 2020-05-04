@@ -116,3 +116,4 @@ struct GlobalTimeline: Codable {
            case data
     }
 }
+// home screen
