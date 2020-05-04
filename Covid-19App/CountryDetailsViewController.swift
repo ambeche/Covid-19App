@@ -7,10 +7,18 @@
 //
 
 import UIKit
+import Charts
 
-class CountryDetailsViewController: UIViewController {
+class CountryDetailsViewController: UIViewController, ChartViewDelegate {
     
     var stats: Country?
+    var lineChart = LineChartView()
+    var barChart = BarChartView()
+    
+    @IBOutlet weak var barView: UIView!
+    
+    
+    @IBOutlet weak var lineChartView: LineChartView!
     
     @IBOutlet weak var countryName: UILabel!
     
@@ -33,11 +41,18 @@ class CountryDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        showCountryDetails()
         
+        showCountryDetails()
+        drawChart()
+        lineChart.delegate = self
+        barChart.delegate = self
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        barView.addSubview(barChart)
+        lineChartView.addSubview(lineChart)
+    }
     
     func showCountryDetails() {
         
@@ -60,15 +75,49 @@ class CountryDetailsViewController: UIViewController {
       }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func drawChart(){
+        var barEntries = [BarChartDataEntry]()
+        var lineEntries = [ChartDataEntry]()
+        
+        guard let timeline = stats?.timeline else{
+                       return
+        }
+        var i = 0
+               
+        for x in timeline.reversed() {
+            i += 1
+            lineEntries.append(ChartDataEntry( x:Double(i), y: Double(x.confirmed)))
+            barEntries.append(BarChartDataEntry( x:Double(x.deaths), y: Double(x.recovered)))
+        }
+               
+        let lineDataSet = LineChartDataSet(entries: lineEntries, label: "Spread Over Time")
+        let barDataSet = BarChartDataSet(entries: barEntries, label: "Recovery vs Deaths")
+               
+        lineDataSet.colors = [UIColor.systemPurple]
+        lineChart.frame = lineChartView.frame
+        lineChart.center = CGPoint(x: 168, y:200)
+        lineChart.animate(xAxisDuration: 4.0, yAxisDuration: 4.0, easingOption: .easeInBounce)
+        lineChart.noDataText = "loading"
+        lineChart.chartDescription?.text = "Infection Timeline"
+        lineChart.chartDescription?.position = CGPoint(x: 220, y: 50)
+        lineChart.chartDescription?.textColor = .systemBlue
+        lineChart.chartDescription?.font = UIFont(name: "Helvetica", size: 20)!
+        lineChart.xAxis.labelPosition = .bottomInside
+        lineChart.data  = LineChartData( dataSet: lineDataSet)
+        
+        barDataSet.colors = ChartColorTemplates.material()
+        
+        barChart.frame = barView.frame
+        barChart.center = CGPoint(x: 168, y:280)
+        barChart.animate(xAxisDuration: 6.0, yAxisDuration: 6.0, easingOption: .easeInBounce)
+        barChart.noDataText = "loading"
+        barChart.chartDescription?.text = "Recovered Vs Deaths Over Time"
+        barChart.chartDescription?.position = CGPoint(x: 320, y: 70)
+        barChart.chartDescription?.textColor = .systemBlue
+        barChart.chartDescription?.font = UIFont(name: "Helvetica", size: 20)!
+        barChart.xAxis.labelPosition = .bottomInside
+        barChart.xAxis.labelTextColor = .systemRed
+        barChart.data  = BarChartData(dataSet: barDataSet)
+        
     }
-    */
-
 }

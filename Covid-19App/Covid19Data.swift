@@ -44,6 +44,10 @@ struct Country: Codable {
     var updated_at: String
     var today: Today
     var latest_data: LatestData
+    var timeline: [Timeline]?
+    var timelineU: [Timeline] {
+           timeline ?? []
+       }
     
    private enum Codingkeys: String, CodingKey {
         case coordinates = "coords"
@@ -54,8 +58,6 @@ struct Country: Codable {
         case today
         case latest_data = "latestData"
     }
- 
-    
 }
 
 struct Coords: Codable {
@@ -81,18 +83,36 @@ struct LatestData: Codable {
         case recovery
         case critical
     }
- 
 }
 
 struct Calculated: Codable {
     var death_rate:Double?
     var recovery_rate: Double?
    
-    
     private enum Codingkeys: String, CodingKey {
         case death_rate = "deathRate"
         case recovery = "recoveryRate"
-        
     }
- 
+}
+
+struct Timeline: Codable {
+    
+    var confirmed: Int
+    var deaths: Int
+    var recovered: Int
+    
+    private enum Codingkeys: String, CodingKey {
+        case confirmed
+        case deaths
+        case recovered
+    }
+}
+
+struct GlobalTimeline: Codable {
+    var data: [Timeline]
+    var _cacheHit: Bool
+    
+    private enum Codingkeys: String, CodingKey {
+           case data
+    }
 }

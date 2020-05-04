@@ -10,6 +10,8 @@ import UIKit
 
 class StatisticsTableViewController: UITableViewController, UISearchResultsUpdating, Covid19APIDelegate {
     
+    
+    
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
     }
     
@@ -22,7 +24,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
     @IBOutlet weak var gCritical: UILabel!
     
     
-    let apiUrl = "https://corona-api.com/countries"
+    let apiUrl = "https://corona-api.com/countries?include=timeline"
     var covid19Fetcher = Covid19APPI()
     private var covidStatistics = [Country]()
     private var isloading = true
@@ -39,7 +41,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
          self.clearsSelectionOnViewWillAppear = false
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        covid19Fetcher.url = apiUrl
+        covid19Fetcher.url1 = apiUrl
         covid19Fetcher.covid19APIDelegate = self
         covid19Fetcher.fetchStatistics()
         
@@ -72,15 +74,6 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
         fatalError("invalid cell type.")
     }
     
-    //let countryData: String
-    
-    
-    /*if isfiltering(){
-        countryData = filteredCountryNames[indexPath.row]
-    }
-    else {
-        countryData = countryNames[indexPath.row]
-    }*/
     var stats: Country
     if !isloading {
         if isfiltering(){
@@ -160,5 +153,9 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
             self.tableView.reloadData()
             print("\(covid19Data.globalCritical )")
         }
+    }
+    
+    func fetchedGlobalTimeline(_ GlobalTimeline: GlobalTimeline) {
+        
     }
 }
