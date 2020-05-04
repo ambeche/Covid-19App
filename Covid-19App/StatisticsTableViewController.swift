@@ -9,6 +9,8 @@
 import UIKit
 
 class StatisticsTableViewController: UITableViewController, UISearchResultsUpdating, Covid19APIDelegate {
+   
+    
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
     }
@@ -39,7 +41,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
          self.clearsSelectionOnViewWillAppear = false
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        covid19Fetcher.url = apiUrl
+        covid19Fetcher.url1 = apiUrl
         covid19Fetcher.covid19APIDelegate = self
         covid19Fetcher.fetchStatistics()
         
@@ -160,5 +162,9 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
             self.tableView.reloadData()
             print("\(covid19Data.globalCritical )")
         }
+    }
+    
+    func fetchedGlobalTimeline(_ GlobalTimeline: GlobalTimeline) {
+        
     }
 }
