@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlQ-Kj-h0m">
-                                <rect key="frame" x="20" y="203" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlQ-Kj-h0m">
+                                <rect key="frame" x="8" y="116" width="398" height="33"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Delete All Registered Users">
@@ -27,22 +26,31 @@
                                     <action selector="deleteAllUsersBtnPressed:" destination="N7R-ru-D0a" eventType="touchUpInside" id="R1i-jb-Wdl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Covid-19 Debug Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5x-sx-yag">
-                                <rect key="frame" x="20" y="107" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Covid-19 Debug Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5x-sx-yag">
+                                <rect key="frame" x="8" y="54" width="398" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For Testing Purpose Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upa-ER-g1Z">
-                                <rect key="frame" x="20" y="136" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Testing Purpose Only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upa-ER-g1Z">
+                                <rect key="frame" x="8" y="83" width="398" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="upa-ER-g1Z" firstAttribute="top" secondItem="M5x-sx-yag" secondAttribute="bottom" constant="8" id="5yq-mu-Wet"/>
+                            <constraint firstItem="61Z-Tq-aC1" firstAttribute="trailing" secondItem="M5x-sx-yag" secondAttribute="trailing" constant="8" id="FVl-lb-F1w"/>
+                            <constraint firstItem="61Z-Tq-aC1" firstAttribute="trailing" secondItem="upa-ER-g1Z" secondAttribute="trailing" constant="8" id="Fcp-dd-sHU"/>
+                            <constraint firstItem="HlQ-Kj-h0m" firstAttribute="top" secondItem="upa-ER-g1Z" secondAttribute="bottom" constant="16" id="KST-bc-JvF"/>
+                            <constraint firstItem="upa-ER-g1Z" firstAttribute="leading" secondItem="61Z-Tq-aC1" secondAttribute="leading" constant="8" id="YQi-ZE-bsf"/>
+                            <constraint firstItem="61Z-Tq-aC1" firstAttribute="trailing" secondItem="HlQ-Kj-h0m" secondAttribute="trailing" constant="8" id="mNO-r6-1Bz"/>
+                            <constraint firstItem="M5x-sx-yag" firstAttribute="leading" secondItem="61Z-Tq-aC1" secondAttribute="leading" constant="8" id="pnc-tk-nEk"/>
+                            <constraint firstItem="M5x-sx-yag" firstAttribute="top" secondItem="61Z-Tq-aC1" secondAttribute="top" constant="10" id="q2c-hg-aKG"/>
+                            <constraint firstItem="HlQ-Kj-h0m" firstAttribute="leading" secondItem="61Z-Tq-aC1" secondAttribute="leading" constant="8" id="u3Q-X9-a7o"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="61Z-Tq-aC1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Debug" id="qCH-Lz-hY8"/>
