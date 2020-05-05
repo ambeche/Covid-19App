@@ -861,7 +861,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18DF800F898CCF6640F5EC89 /* Pods-Covid-19AppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Covid-19AppTests/Info.plist";
@@ -883,7 +883,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F840B2D7EB8C721107F8B7E /* Pods-Covid-19AppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Covid-19AppTests/Info.plist";
@@ -905,7 +905,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B8CF2129A398F92648AD12B /* Pods-Covid-19App-Covid-19AppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Covid-19AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -925,7 +925,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55D9B3B2B00A24120B487902 /* Pods-Covid-19App-Covid-19AppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Covid-19AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
