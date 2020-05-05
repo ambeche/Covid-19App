@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Charts
 
 class Covid19APPI {
     private var _url1: URL?

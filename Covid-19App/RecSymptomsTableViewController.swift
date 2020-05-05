@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Charts
 
 class RecSymptomsTableViewController: UITableViewController {
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

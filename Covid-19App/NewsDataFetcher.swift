@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Charts
 
 class NewsDataFetcher {
     private var _url: URL?

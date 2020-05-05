@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Charts
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

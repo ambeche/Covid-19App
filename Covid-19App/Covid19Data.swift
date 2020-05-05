@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Charts
 
      struct Covid19Data: Codable {
          

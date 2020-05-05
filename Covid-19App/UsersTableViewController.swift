@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class UsersTableViewController: UITableViewController {
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

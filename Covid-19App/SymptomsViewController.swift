@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class SymptomsViewController: UIViewController {
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
