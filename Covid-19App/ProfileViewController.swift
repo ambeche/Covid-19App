@@ -32,7 +32,8 @@ class ProfileViewController: UIViewController {
             }
             do {
                 let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
-                loggedInUserEmailLabel.text = loggedInUser.email
+                loggedInUserEmailLabel.text = //loggedInUser.email
+                    "tester70@metropolia.fi"
                 loggedInUserNameLabel.text = loggedInUser.name
                 loggedInUserStatusLabel.text = loggedInUser.status
                 if loggedInUser.status == "Healthy" {
