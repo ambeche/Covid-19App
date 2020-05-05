@@ -8,11 +8,11 @@ target 'Covid-19App' do
 
   target 'Covid-19AppTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Charts'
   end
 
   target 'Covid-19AppUITests' do
-    # Pods for testing
+    pod 'Charts'
   end
 
 end
