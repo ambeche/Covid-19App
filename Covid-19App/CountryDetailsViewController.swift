@@ -118,6 +118,7 @@ class CountryDetailsViewController: UIViewController, ChartViewDelegate {
         barChart.xAxis.labelPosition = .bottomInside
         barChart.xAxis.labelTextColor = .systemRed
         barChart.data  = BarChartData(dataSet: barDataSet)
+        //testing
         
     }
 }
