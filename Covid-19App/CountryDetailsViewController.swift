@@ -92,14 +92,15 @@ class CountryDetailsViewController: UIViewController, ChartViewDelegate {
         }
                
         let lineDataSet = LineChartDataSet(entries: lineEntries, label: "Spread Over Time")
+        lineDataSet.label = NSLocalizedString("Spread Over Time", comment: "spread over time");
         let barDataSet = BarChartDataSet(entries: barEntries, label: "Recovery vs Deaths")
-               
+        barDataSet.label = NSLocalizedString("Recovery vs Deaths", comment: "recovery vs deaths");
         lineDataSet.colors = ChartColorTemplates.joyful()
         lineChart.frame = lineChartView.frame
         lineChart.center = CGPoint(x: 168, y:200)
         lineChart.animate(xAxisDuration: 4.0, yAxisDuration: 4.0, easingOption: .easeInBounce)
-        lineChart.noDataText = "loading"
-        lineChart.chartDescription?.text = "Infection Timeline"
+        lineChart.noDataText = NSLocalizedString("loading", comment:"loading");
+        lineChart.chartDescription?.text = NSLocalizedString("Infection Timeline", comment: "Infection timeline");
         lineChart.chartDescription?.position = CGPoint(x: 220, y: 50)
         lineChart.chartDescription?.textColor = .systemBlue
         lineChart.chartDescription?.font = UIFont(name: "Helvetica", size: 20)!

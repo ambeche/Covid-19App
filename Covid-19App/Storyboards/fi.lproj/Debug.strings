@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Delete All Registered Users"; ObjectID = "HlQ-Kj-h0m"; */
+"HlQ-Kj-h0m.normalTitle" = "Poista kaikki rekisteröidyt käyttäjät";
+
+/* Class = "UILabel"; text = "Covid-19 Debug Screen"; ObjectID = "M5x-sx-yag"; */
+"M5x-sx-yag.text" = "Covid-19 Debug Ruutu";
+
+/* Class = "UITabBarItem"; title = "Debug"; ObjectID = "qCH-Lz-hY8"; */
+"qCH-Lz-hY8.title" = "Debug";
+
+/* Class = "UILabel"; text = "For Testing Purpose Only"; ObjectID = "upa-ER-g1Z"; */
+"upa-ER-g1Z.text" = "Vain testaus tarkoituksiin";

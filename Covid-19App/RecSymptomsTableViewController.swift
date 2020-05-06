@@ -11,7 +11,7 @@ import CoreData
 
 class RecSymptomsTableViewController: UITableViewController {
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let statusArray: Array<String> = ["Healthy", "Quarantined", "Covid-19 +", "Recovered"]
+    let statusArray: Array<String> = [NSLocalizedString("Healthy", comment: "statusArray value healthy"),NSLocalizedString("Quarantined", comment: "statusArray value quarantined"), NSLocalizedString("Covid-19 +", comment: "statusArray value covid19"), NSLocalizedString("Recovered", comment: "statusArray value recovered")]
     var user: User?
     var symptomArray: Array<Symptom>?
     
@@ -90,7 +90,7 @@ class RecSymptomsTableViewController: UITableViewController {
         if (targetSymptom.fever) {
             let feverLabel = UILabel()
             feverLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
-            feverLabel.text = "🤒 Fever"
+            feverLabel.text = NSLocalizedString("🤒 Fever", comment: "fever");
             cell.symptomContentView.addSubview(feverLabel)
             yCord += 23
         }
@@ -99,7 +99,7 @@ class RecSymptomsTableViewController: UITableViewController {
         if (targetSymptom.cough) {
             let coughLabel = UILabel()
             coughLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
-            coughLabel.text = "😷 Cough"
+            coughLabel.text = NSLocalizedString("😷 Cough", comment: "Cough");
             cell.symptomContentView.addSubview(coughLabel)
             yCord += 23
         }
@@ -108,7 +108,7 @@ class RecSymptomsTableViewController: UITableViewController {
         if (targetSymptom.breathing) {
             let breathDiffLabel = UILabel()
             breathDiffLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
-            breathDiffLabel.text = "🤢 Breathing Difficulties"
+            breathDiffLabel.text = NSLocalizedString("🤢 Breathing Difficulties", comment: "Breathing difficulties");
             cell.symptomContentView.addSubview(breathDiffLabel)
             yCord += 23
         }
@@ -117,7 +117,7 @@ class RecSymptomsTableViewController: UITableViewController {
         if (targetSymptom.muscle) {
             let musclePainLabel = UILabel()
             musclePainLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
-            musclePainLabel.text = "🥵 Muscle Pain"
+            musclePainLabel.text = NSLocalizedString("🥵 Muscle Pain", comment: "Muscle pain");
             cell.symptomContentView.addSubview(musclePainLabel)
             yCord += 23
         }
@@ -126,7 +126,7 @@ class RecSymptomsTableViewController: UITableViewController {
         if (targetSymptom.throat) {
             let soreThroatLabel = UILabel()
             soreThroatLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
-            soreThroatLabel.text = "🤧 Sore Throat"
+            soreThroatLabel.text = NSLocalizedString("🤧 Sore Throat", comment: "Kurkkukipu");
             cell.symptomContentView.addSubview(soreThroatLabel)
             yCord += 23
         }
@@ -135,7 +135,7 @@ class RecSymptomsTableViewController: UITableViewController {
         if (targetSymptom.chills) {
             let chillsLabel = UILabel()
             chillsLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
-            chillsLabel.text = "🥶 Chills"
+            chillsLabel.text = NSLocalizedString("🥶 Chills", comment: "Chills");
             cell.symptomContentView.addSubview(chillsLabel)
             yCord += 23
         }
@@ -144,7 +144,7 @@ class RecSymptomsTableViewController: UITableViewController {
         if (targetSymptom.headache) {
             let headacheLabel = UILabel()
             headacheLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
-            headacheLabel.text = "🤕 Headache"
+            headacheLabel.text = NSLocalizedString("🤕 Headache", comment: "Päänsärky");
             cell.symptomContentView.addSubview(headacheLabel)
             yCord += 23
         }
@@ -153,7 +153,7 @@ class RecSymptomsTableViewController: UITableViewController {
         if (targetSymptom.taste) {
             let lossOfTasSmellLabel = UILabel()
             lossOfTasSmellLabel.frame = CGRect(x: 20, y: yCord, width: 374, height: 21)
-            lossOfTasSmellLabel.text = "🤮 Loss of Taste or Smell"
+            lossOfTasSmellLabel.text = NSLocalizedString("🤮 Loss of Taste or Smell", comment: "Loss of Taste or Smell");
             cell.symptomContentView.addSubview(lossOfTasSmellLabel)
         }
         return cell
@@ -193,7 +193,7 @@ class RecSymptomsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

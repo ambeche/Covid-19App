@@ -27,7 +27,7 @@
 "Q0q-1E-SG4.normalTitle" = "Kirjaudu ulos ";
 
 /* Class = "UIButton"; normalTitle = "👉 Record Symptoms 🩺"; ObjectID = "Qay-Ww-CLK"; */
-"Qay-Ww-CLK.normalTitle" = "👉 Tallennetut oireet 🩺";
+"Qay-Ww-CLK.normalTitle" = "👉 Tallenna oireet 🩺";
 
 /* Class = "UILabel"; text = "Email:"; ObjectID = "R1D-wM-9G4"; */
 "R1D-wM-9G4.text" = "Sähköposti:";

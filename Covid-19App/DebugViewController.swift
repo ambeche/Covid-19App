@@ -18,6 +18,9 @@ class DebugViewController: UIViewController {
     
     @IBAction func deleteAllUsersBtnPressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "Delete All Users", message: "Are you sure", preferredStyle: .actionSheet)
+        alert.title = NSLocalizedString("Delete All Users", comment: "title");
+        alert.message = NSLocalizedString("Are you sure", comment: "message");
+
 
         alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: {action in
             do {

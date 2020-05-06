@@ -1,0 +1,69 @@
+
+/* Class = "UITextField"; placeholder = "Your full name"; ObjectID = "04Y-MC-fSN"; */
+"04Y-MC-fSN.placeholder" = "Your full name";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "17w-YR-cIp"; */
+"17w-YR-cIp.placeholder" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Log in with your COVID-19 ID. No account yet? "; ObjectID = "2F9-ew-jut"; */
+"2F9-ew-jut.text" = "Log in with your COVID-19 ID. No account yet? ";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "2Nu-s5-x4b"; */
+"2Nu-s5-x4b.text" = "Password";
+
+/* Class = "UITabBarItem"; title = "Login"; ObjectID = "4MX-u8-wkT"; */
+"4MX-u8-wkT.title" = "Login";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "7hH-xP-CPu"; */
+"7hH-xP-CPu.text" = "Confirm Password";
+
+/* Class = "UITextField"; placeholder = "Your password"; ObjectID = "AhO-tA-KwW"; */
+"AhO-tA-KwW.placeholder" = "Your password";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "DES-HI-oAz"; */
+"DES-HI-oAz.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "FZI-n5-fmY"; */
+"FZI-n5-fmY.text" = "Name";
+
+/* Class = "UILabel"; text = "COVID-19"; ObjectID = "KaS-Nk-hlw"; */
+"KaS-Nk-hlw.text" = "COVID-19";
+
+/* Class = "UITextField"; placeholder = "Your email address"; ObjectID = "LF6-62-HPg"; */
+"LF6-62-HPg.placeholder" = "Your email address";
+
+/* Class = "UIButton"; normalTitle = "Log in"; ObjectID = "MCp-6P-rpd"; */
+"MCp-6P-rpd.normalTitle" = "Log in";
+
+/* Class = "UITextField"; placeholder = "user@unknown.com"; ObjectID = "QYi-IZ-ebq"; */
+"QYi-IZ-ebq.placeholder" = "user@unknown.com";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Uem-ta-LOJ"; */
+"Uem-ta-LOJ.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Log in"; ObjectID = "Y93-7V-h6k"; */
+"Y93-7V-h6k.text" = "Log in";
+
+/* Class = "UIButton"; normalTitle = "REGISTER"; ObjectID = "YeQ-fP-qKw"; */
+"YeQ-fP-qKw.normalTitle" = "REGISTER";
+
+/* Class = "UILabel"; text = "E-Mail"; ObjectID = "dWs-4K-Wbh"; */
+"dWs-4K-Wbh.text" = "E-Mail";
+
+/* Class = "UIButton"; normalTitle = "LOG IN"; ObjectID = "gW3-KJ-Iy4"; */
+"gW3-KJ-Iy4.normalTitle" = "LOG IN";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "kV1-9d-8q4"; */
+"kV1-9d-8q4.text" = "Register";
+
+/* Class = "UILabel"; text = "COVID-19"; ObjectID = "rO1-FR-DCX"; */
+"rO1-FR-DCX.text" = "COVID-19";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "txs-Nm-bRX"; */
+"txs-Nm-bRX.text" = "Password";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "wBJ-nz-xAL"; */
+"wBJ-nz-xAL.text" = "Username";
+
+/* Class = "UILabel"; text = "Already have an account?"; ObjectID = "wYX-vR-999"; */
+"wYX-vR-999.text" = "Already have an account?";

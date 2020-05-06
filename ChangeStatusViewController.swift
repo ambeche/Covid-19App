@@ -13,8 +13,9 @@ class ChangeStatusViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var statusColorLabel: UILabel!
     @IBOutlet weak var currentStatusLabel: UILabel!
     @IBOutlet weak var statusPickerView: UIPickerView!
-    let statusArray: Array<String> = ["Healthy", "Quarantined", "Covid-19 +", "Recovered"]
-    var statusToBeSaved: String = "Healthy"
+    let statusArray: Array<String> = [NSLocalizedString("Healthy", comment: "statusArray value healthy"),NSLocalizedString("Quarantined", comment: "statusArray value quarantined"), NSLocalizedString("Covid-19 +", comment: "statusArray value covid19"), NSLocalizedString("Recovered", comment: "statusArray value recovered")];
+    
+    var statusToBeSaved: String = NSLocalizedString("Healthy", comment: "healthy");
     var currentUser: User?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +36,11 @@ class ChangeStatusViewController: UIViewController, UIPickerViewDelegate, UIPick
                 let loggedInUser = try User.fetchUserByEmail(email: loggedInUserEmail, context: self.viewContext)
                 self.currentUser = loggedInUser
                 self.currentStatusLabel.text = loggedInUser.status
-                if loggedInUser.status == "Healthy" {
+                if loggedInUser.status == NSLocalizedString("Healthy", comment: "healthy") {
                     self.statusColorLabel.backgroundColor = UIColor.blue
-                } else if loggedInUser.status == "Quarantined" {
+                } else if loggedInUser.status == NSLocalizedString("Quarantined", comment: "quarantined") {
                     self.statusColorLabel.backgroundColor = UIColor.orange
-                } else if loggedInUser.status == "Covid-19 +" {
+                } else if loggedInUser.status == NSLocalizedString("Covid-19 +", comment: "covid19") {
                     self.statusColorLabel.backgroundColor = UIColor.red
                 } else {
                     self.statusColorLabel.backgroundColor = UIColor.green
@@ -75,11 +76,11 @@ class ChangeStatusViewController: UIViewController, UIPickerViewDelegate, UIPick
                 user.status = self.statusToBeSaved
                 try self.viewContext.save()
                 self.currentStatusLabel.text = user.status
-                if user.status == "Healthy" {
+                if user.status == NSLocalizedString("Healthy", comment: "") {
                     self.statusColorLabel.backgroundColor = UIColor.blue
-                } else if user.status == "Quarantined" {
+                } else if user.status == NSLocalizedString("Quarantined", comment: ""){
                     self.statusColorLabel.backgroundColor = UIColor.orange
-                } else if user.status == "Covid-19 +" {
+                } else if user.status == NSLocalizedString("Covid-19 +" , comment: ""){
                     self.statusColorLabel.backgroundColor = UIColor.red
                 } else {
                     self.statusColorLabel.backgroundColor = UIColor.green
