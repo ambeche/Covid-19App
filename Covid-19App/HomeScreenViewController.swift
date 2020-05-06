@@ -95,7 +95,7 @@ class HomeScreenViewController: UIViewController, Covid19APIDelegate, ChartViewD
         lineChart.animate(xAxisDuration: 1.50, yAxisDuration: 1.50, easingOption: .easeInBounce)
         lineChart.noDataText = "loading"
         lineChart.chartDescription?.text = NSLocalizedString("Infection Timeline", comment: "lineChart chart description");
-        lineChart.chartDescription?.position = CGPoint(x: 220, y: 50)
+        lineChart.chartDescription?.position = CGPoint(x: 240, y: 50)
         lineChart.chartDescription?.textColor = .systemBlue
         lineChart.chartDescription?.font = UIFont(name: "Helvetica", size: 20)!
         lineChart.xAxis.labelPosition = .bottomInside
@@ -103,7 +103,7 @@ class HomeScreenViewController: UIViewController, Covid19APIDelegate, ChartViewD
     }
     
     func drawSlogan(){
-        slogan.frame = CGRect(x: 80, y: 686, width: 230, height: 40)
+        slogan.frame = CGRect(x: 60, y: 686, width: 280, height: 40)
         slogan.text = NSLocalizedString("Stay Home, Save Lives!", comment: "sloganText");
         slogan.textAlignment = .center
         slogan.font = UIFont(name: "Helvetica", size: 20)!
