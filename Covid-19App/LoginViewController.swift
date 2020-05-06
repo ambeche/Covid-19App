@@ -42,15 +42,15 @@ class LoginViewController: UIViewController {
                     covidDefaults.set(emailTextField.text!, forKey: "loggedInUser")
                     self.performSegue(withIdentifier: "BackToProfileScreen", sender: nil)
                 } else {
-                    self.loginBtnErrorText.text = "Wrong username or password"
+                    self.loginBtnErrorText.text = NSLocalizedString("Wrong username or password", comment: "wrong user or password");
                 }
                 
             } else {
-                self.loginBtnErrorText.text = "Wrong username or password"
+                self.loginBtnErrorText.text = NSLocalizedString("Wrong username or password", comment: "wrong user or password");
             }
         } catch let error as NSError {
             print("Could not verify login details. \(error). \(error.userInfo)")
-            self.loginBtnErrorText.text = "Could not verify login details"
+            self.loginBtnErrorText.text = NSLocalizedString("Could not verify login details", comment: "verify login error text");
         }
     }
     

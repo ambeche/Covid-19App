@@ -47,7 +47,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search by Country or city"
+        searchController.searchBar.placeholder = NSLocalizedString("Search by Country or city", comment: "Searchbar placeholder");
         searchController.searchBar.backgroundColor = UIColor.systemBackground
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false

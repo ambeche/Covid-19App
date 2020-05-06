@@ -65,8 +65,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             self.registerBtnErrorText.text = ""
             self.performSegue(withIdentifier: "BackToProfileScreenFromRegisterScreen", sender: nil)
         } else {
-            self.registerBtnErrorText.text = "One or more fields require your attention"
-        }; registerBtnErrorText.text = NSLocalizedString("One or more fields require your attention", comment: "registerButtonErrorText");
+            self.registerBtnErrorText.text = NSLocalizedString("One or more fields require your attention", comment: "registerButtonErrorText");
+        }
     }
     
     func isEmailValid(email: String) -> Bool {
@@ -76,12 +76,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             let testEmail = NSPredicate(format:"SELF MATCHES %@", regularExpressionForEmail)
             let validEmail = testEmail.evaluate(with: email)
             if (!validEmail) {
-                self.emailErrorText.text = "Email Format Not Correct"
+                self.emailErrorText.text = NSLocalizedString("Email Format Not Correct", comment: "emailFormatNotCorrect text");
                 return false
             }
             let emailAvailable = try !User.checkUserExists(email: emailRegister.text ?? "", context: self.viewContext)
             if (!emailAvailable) {
-                self.emailErrorText.text = "Email already registered"
+                self.emailErrorText.text = NSLocalizedString("Email already registered", comment: "emailerror text");
                 return false
             }
             self.emailErrorText.text = ""
@@ -89,7 +89,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
         } catch let error as NSError {
             print("Could not check email avaialability. \(error). \(error.userInfo)")
-            self.emailErrorText.text = "Email availability could not be checked"
+            self.emailErrorText.text = NSLocalizedString("Email availability could not be checked", comment: "emailError text");
             return false
         }
     }
@@ -99,18 +99,18 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             self.fullNameErrorText.text = ""
             return true
         }
-        self.fullNameErrorText.text = "Full name must be greater than 3 characters"
+        self.fullNameErrorText.text = NSLocalizedString("Full name must be greater than 3 characters", comment: "NameError length");
         return false
     }
     
     func isPasswordValid(password: String) -> Bool {
         if (password.count <= 5) {
-            self.passwordErrorText.text = "Password length must be greater than 5"
-            passwordErrorText.text = NSLocalizedString("Password length must be greater than 5", comment: "PasswordErrorText");
+            self.passwordErrorText.text = NSLocalizedString("Password length must be greater than 5", comment: "password length");
             return false
         }
         if (self.passwordRegister.text != self.confirmPasswordRegister.text){
-            self.passwordErrorText.text = "Passwords do not match"
+            self.passwordErrorText.text = NSLocalizedString("Passwords do not match", comment: "password dont match");
+            
             return false
         }
         self.passwordErrorText.text = ""

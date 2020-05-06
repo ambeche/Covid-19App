@@ -1,0 +1,72 @@
+/*
+  localizable.strings
+  Covid-19App
+
+  Created by iosdev on 4.5.2020.
+  Copyright © 2020 Covid-19App. All rights reserved.
+*/
+
+
+
+//comment: "registerButtonErrorText
+"One or more fields require your attention" = "One or more fields require your attention";
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "92E-jv-jdR"; */
+"Password length must be greater than 5"="Password length must be greater than 5";
+ //comment: "sloganText"
+"Stay Home, Save Lives!" = "Stay Home, Save Lives!";
+// Infection Timelin
+"Infection Timeline"="Infection Timeline";
+//"statusArray value healthy"
+"Healthy"="Healthy";
+//"statusArray value quarantined"
+"Quarantined"="Quarantined";
+//"statusArray value Covid19"
+"Covid-19"="Covid-19";
+//"statusArray value Recovered"
+"Recovered"="Recovered";
+//, comment: "password dont match
+"Passwords do not match"="Passwords do not match";
+//, comment: "NameError length"
+"Full name must be greater than 3 characters"="Full name must be greater than 3 characters";
+//, comment: "emailError text"
+"Email availability could not be checked"="Email availability could not be checked";
+//, comment: "emailerror text
+"Email already registered"="Email already registered";
+//, comment: "emailFormatNotCorrect text"
+"Email Format Not Correct"="Email Format Not Correct";
+//, comment: "title
+"Delete All Users"="Delete All Users";
+//, comment: "message"
+"Are you sure"="Are you sure";
+//, comment: "spread over time")
+"Spread Over Time"="Spread Over Time";
+//, comment: "recovery vs deaths"
+"Recovery vs Deaths"="Recovery vs Deaths";
+//Loading
+"loading" = "loading";
+//"Infection Timeline"
+"Infection Timeline"="Infection Timeline";
+//"Wrong username or password"
+"Wrong username or password"="Wrong username or password";
+//, comment: "verify login error text"
+"Could not verify login details"="Could not verify login details";
+//"Healthy"
+"Healthy"="Healthy";
+//"🤒 Fever"
+"🤒 Fever"="🤒 Fever";
+//"😷 Cough"
+"😷 Cough"="😷 Cough";
+//"🤢 Breathing Difficulties"
+"🤢 Breathing Difficulties"="🤢 Breathing Difficulties";
+//"🥵 Muscle Pain"
+"🥵 Muscle Pain"="🥵 Muscle Pain";
+//"🤧 Sore Throat"
+"🤧 Sore Throat"="🤧 Sore Throat";
+//"🥶 Chills"
+"🥶 Chills"="🥶 Chills";
+//"🤕 Headache"
+"🤕 Headache"="🤕 Headache";
+//"🤮 Loss of Taste or Smell"
+"🤮 Loss of Taste or Smell"="🤮 Loss of Taste or Smell";
+//, comment: "Searchbar placeholder");
+"Search by Country or city"="Search by Country or city";

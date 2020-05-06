@@ -36,11 +36,11 @@ class ProfileViewController: UIViewController {
                     "tester70@metropolia.fi"
                 loggedInUserNameLabel.text = loggedInUser.name
                 loggedInUserStatusLabel.text = loggedInUser.status
-                if loggedInUser.status == "Healthy" {
+                if loggedInUser.status == NSLocalizedString("Healthy", comment: "") {
                     self.statusColorLabel.backgroundColor = UIColor.blue
-                } else if loggedInUser.status == "Quarantined" {
+                } else if loggedInUser.status == NSLocalizedString("Quarantined", comment: "") {
                     self.statusColorLabel.backgroundColor = UIColor.orange
-                } else if loggedInUser.status == "Covid-19 +" {
+                } else if loggedInUser.status == NSLocalizedString("Covid-19 +" , comment: ""){
                     self.statusColorLabel.backgroundColor = UIColor.red
                 } else {
                     self.statusColorLabel.backgroundColor = UIColor.green

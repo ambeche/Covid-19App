@@ -1,0 +1,74 @@
+/*
+  localizable.strings
+  Covid-19App
+
+  Created by iosdev on 4.5.2020.
+  Copyright © 2020 Covid-19App. All rights reserved.
+*/
+
+
+
+//comment: "registerButtonErrorText
+"One or more fields require your attention" = "Yksi tai useampi kenttä tarvii huomiotasi";
+//Class = "UITabBarItem"; title = "News"; ObjectID = "92E-jv-jdR"
+"Password length must be greater than 5"="Salasanan täytyy olla pidempi kuin 5 merkkiä";
+ //comment: "sloganText"
+"Stay Home, Save Lives!" = "Pysy kotona, Pelasta henkiä!";
+// comment: "lineChart chart description"
+"Infection Timeline"="Tartuntojen aikajana";
+//"statusArray value healthy"
+"Healthy"="Terve";
+//"statusArray value quarantined"
+"Quarantined"="Karanteenissa";
+//"statusArray value Covid19"
+"Covid-19"="Covid-19";
+//"statusArray value Recovered"
+"Recovered"="Toipunut";
+//, comment: "password dont match
+"Passwords do not match"="Salasanat eivät täsmää";
+//, comment: "NameError length"
+"Full name must be greater than 3 characters"="Kokonimen täytyy olla pidempi kuin 3 merkkiä";
+//, comment: "emailError text"
+"Email availability could not be checked"="Sähköpostin saatavuutta ei voitu tarkastaa";
+//, comment: "emailerror text
+"Email already registered"="Sähköposti on jo rekisteröity";
+//, comment: "emailFormatNotCorrect text"
+"Email Format Not Correct"="Sähköpostin muoto ei ole oikea";
+//, comment: "title
+"Delete All Users"="Poista kaikki käyttäjät";
+//, comment: "message"
+"Are you sure"="Oletko varma";
+//, comment: "spread over time")
+"Spread Over Time"="Levinnyt ajan myötä";
+//, comment: "recovery vs deaths"
+"Recovery vs Deaths"="Toipuneet vs Kuolemat";
+//Loading
+"loading" = "lataa";
+//"Infection Timeline"
+"Infection Timeline"="Tartunnan aikajana";
+//"Wrong username or password"
+"Wrong username or password"="Väärä käyttäjänimi tai salasana";
+//, comment: "verify login error text"
+"Could not verify login details"="Kirjautumistietoja ei voitu vahvistaa";
+//"Healthy"
+"Healthy"="Terve";
+//"🤒 Fever"
+"🤒 Fever"="🤒 Kuume";
+//"😷 Cough"
+"😷 Cough"="😷 Yskä";
+//"🤢 Breathing Difficulties"
+"🤢 Breathing Difficulties"="🤢 Hengitys ongelmia";
+//"🥵 Muscle Pain"
+"🥵 Muscle Pain"="🥵 Lihaskipu";
+//"🤧 Sore Throat"
+"🤧 Sore Throat"="🤧 Kurkkukipu";
+//"🥶 Chills"
+"🥶 Chills"="🥶 Vilunväristyksiä";
+//"🤕 Headache"
+"🤕 Headache"="🤕 Päänsärky";
+//"🤮 Loss of Taste or Smell"
+"🤮 Loss of Taste or Smell"="🤮 Maku- tai hajuaisitin menetys";
+//, comment: "Searchbar placeholder");
+"Search by Country or city"="Etsi Maata tai kaupunkia";
+
+
