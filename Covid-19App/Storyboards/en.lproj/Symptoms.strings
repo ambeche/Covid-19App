@@ -6,7 +6,7 @@
 "NYZ-fH-39x.text" = "🥵 Muscle Pain";
 
 /* Class = "UILabel"; text = "🤢 Breathing Difficulties"; ObjectID = "O8c-zK-Oi5"; */
-"O8c-zK-Oi5.text" = "🤢 Breathing Difficulties";
+"O8c-zK-Oi5.text" = "🤢 Inhaling Strain";
 
 /* Class = "UILabel"; text = "🤕 Headache"; ObjectID = "QkK-0j-akU"; */
 "QkK-0j-akU.text" = "🤕 Headache";
@@ -21,7 +21,7 @@
 "sld-wm-KMK.normalTitle" = "Save 🩺";
 
 /* Class = "UILabel"; text = "🤮 Loss of Taste / Smell"; ObjectID = "tB5-0C-HNK"; */
-"tB5-0C-HNK.text" = "🤮 Loss of Taste / Smell";
+"tB5-0C-HNK.text" = "🤮 Taste Loss";
 
 /* Class = "UILabel"; text = "🤒 Fever"; ObjectID = "uAG-ZW-mKJ"; */
 "uAG-ZW-mKJ.text" = "🤒 Fever";

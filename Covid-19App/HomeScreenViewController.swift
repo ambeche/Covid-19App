@@ -91,7 +91,7 @@ class HomeScreenViewController: UIViewController, Covid19APIDelegate, ChartViewD
         let lineDataSet = LineChartDataSet(entries: lineEntries, label: "Spread Over Time")
         
         lineChart.frame = CGRect(x: 0, y: 0, width: 350, height: 250 )
-        lineChart.center = CGPoint(x: 185, y:570)
+        lineChart.center = CGPoint(x: 200, y:570)
         lineChart.animate(xAxisDuration: 1.50, yAxisDuration: 1.50, easingOption: .easeInBounce)
         lineChart.noDataText = "loading"
         lineChart.chartDescription?.text = NSLocalizedString("Infection Timeline", comment: "lineChart chart description");
