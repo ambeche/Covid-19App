@@ -4,7 +4,7 @@
 *  ***Covid-19 Symptoms Checker***
 *  **Recent Covid-19 global statistics**
 *  **Recent Covid-19 country specific statistics**
-####  Charts Covid-19 infection timeline 
+*  **Charts Covid-19 infection timeline** 
 *  **Current News about Covid-19 impact around the globe**
 
 ## **Environment**
