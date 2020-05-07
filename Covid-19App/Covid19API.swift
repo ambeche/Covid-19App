@@ -5,6 +5,7 @@
 //  Created by iosdev on 24.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //
+//  Covid19APPI is the Model for HomeScreeenViewController, it fetches data from the server using dataTask() and uses HomeScreenViewController as a delegate.
 
 import Foundation
 
@@ -30,8 +31,9 @@ class Covid19APPI {
             return _url2?.absoluteString ?? "invalid url"
         }
     }
-    
-    func fetchStatistics () {
+
+// fetches the global statistics with country specific data
+    func fetchStatistics() {
 
         let dataTask = URLSession.shared.dataTask(with: _url1!) {data, response, error in
             if let error = error {
@@ -58,7 +60,8 @@ class Covid19APPI {
         }
             dataTask.resume()
     }
-    
+      
+// fetches the global timeline for Covid-19
     func fetchTimeline () {
 
         let dataTask = URLSession.shared.dataTask(with: _url2!) {data, response, error in

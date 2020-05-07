@@ -5,6 +5,8 @@
 //  Created by Rafe Ibrahim on 29.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //
+//  This class Acts as the Delegate to Covid-19API class, it manipulates the fetched data and updates the Home screen
+//  UI elements are programmatically drawn
 
 import UIKit
 import Charts
@@ -96,7 +98,7 @@ class HomeScreenViewController: UIViewController, Covid19APIDelegate, ChartViewD
         lineChart.noDataText = "loading"
         lineChart.chartDescription?.text = NSLocalizedString("Infection Timeline", comment: "lineChart chart description");
         lineChart.chartDescription?.position = CGPoint(x: 240, y: 50)
-        lineChart.chartDescription?.textColor = .systemBlue
+        lineChart.chartDescription?.textColor = NSUIColor(hex: 0x0a84ff)
         lineChart.chartDescription?.font = UIFont(name: "Helvetica", size: 20)!
         lineChart.xAxis.labelPosition = .bottomInside
         lineChart.data  = LineChartData( dataSet: lineDataSet)
@@ -107,7 +109,7 @@ class HomeScreenViewController: UIViewController, Covid19APIDelegate, ChartViewD
         slogan.text = NSLocalizedString("Stay Home, Save Lives!", comment: "sloganText");
         slogan.textAlignment = .center
         slogan.font = UIFont(name: "Helvetica", size: 20)!
-        slogan.textColor = .systemBlue
+        slogan.textColor = NSUIColor(hex: 0x0a84ff)
         view.addSubview(slogan)
     }
 }

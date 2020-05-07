@@ -5,6 +5,9 @@
 //  Created by iosdev on 27.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
 //
+//  CountryDetailsViewController receives country specific data from StatisticsTableViewController
+//  It then manipulates the data to dispaly details ofcountry specific statistics
+//  Uses the charts library to plot line and bar charts of the infection rates
 
 import UIKit
 import Charts
@@ -74,7 +77,8 @@ class CountryDetailsViewController: UIViewController, ChartViewDelegate {
         lastUpdated.text = "Last Updated \(stats.updated_at)"
       }
     }
-    
+
+//  Draws line and bar charts
     func drawChart(){
         var barEntries = [BarChartDataEntry]()
         var lineEntries = [ChartDataEntry]()
