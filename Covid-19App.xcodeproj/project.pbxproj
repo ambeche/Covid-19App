@@ -155,7 +155,7 @@
 		F79818642459BD0C00C0CC4A /* Symptom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F79818652459BD0C00C0CC4A /* Symptom+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F79818662459BD0C00C0CC4A /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F7CA779E245DB69500E10577 /* ChangeStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStatusViewController.swift; sourceTree = SOURCE_ROOT; };
+		F7CA779E245DB69500E10577 /* ChangeStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangeStatusViewController.swift; path = "Covid-19App/ProfileTab/ChangeStatusViewController.swift"; sourceTree = SOURCE_ROOT; };
 		F7DFDC57246085A5008D0037 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F7DFDC5924609A8E008D0037 /* Symptom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,44 +223,21 @@
 		6A7B73EF244853680096EE52 /* Covid-19App */ = {
 			isa = PBXGroup;
 			children = (
-				F79818622459BD0C00C0CC4A /* NewsArticle+CoreDataClass.swift */,
-				F79818632459BD0C00C0CC4A /* NewsArticle+CoreDataProperties.swift */,
-				F79818642459BD0C00C0CC4A /* Symptom+CoreDataClass.swift */,
-				F79818652459BD0C00C0CC4A /* Symptom+CoreDataProperties.swift */,
-				F79818662459BD0C00C0CC4A /* User+CoreDataClass.swift */,
-				F7908660245C2D6A003A4F1E /* User+CoreDataProperties.swift */,
 				F760BA90244EE51A009B3A7A /* Storyboards */,
+				6A8533F32464352A00306D14 /* HomeTab */,
+				6A8533F2246434A300306D14 /* StatisticsTab */,
+				6A8533F0246432ED00306D14 /* NewsTab */,
+				6A8533F42464356500306D14 /* ProfileTab */,
+				6A8533F12464341000306D14 /* SymptomsTab */,
+				6A8533F52464368C00306D14 /* DebugTab */,
 				6A7B73F0244853680096EE52 /* AppDelegate.swift */,
 				6A7B73F2244853680096EE52 /* SceneDelegate.swift */,
+				6A8533EE2463FC1800306D14 /* NSUIColor+HexValue.swift */,
 				6A7B73F4244853680096EE52 /* ViewController.swift */,
-				F70D746B2452B967006B7008 /* NewsTableViewController.swift */,
-				F70D74712452BA8A006B7008 /* NewsTableViewCell.swift */,
-				F77A2A062456F4DF00280660 /* webViewController.swift */,
-				F70D746D2452B9C3006B7008 /* NewsDataFetcher.swift */,
-				F70D746F2452BA1B006B7008 /* NewsData.swift */,
-				6AA55ECC2452EBCC003585EA /* StatisticsTableViewController.swift */,
-				6AA55ED02452EDA3003585EA /* StatisticsTableViewCell.swift */,
-				F7981842245946F200C0CC4A /* RecSymptomsTableViewController.swift */,
-				F79818442459472000C0CC4A /* RecSymptomsTableViewCell.swift */,
-				F78D9C50245F209C00961F40 /* UsersTableViewController.swift */,
-				F78D9C54245F25B400961F40 /* UsersTableViewCell.swift */,
-				F798183E2458BC0F00C0CC4A /* ProfileViewController.swift */,
-				F7CA779E245DB69500E10577 /* ChangeStatusViewController.swift */,
-				F79818402458BCCE00C0CC4A /* LoginViewController.swift */,
-				F70AA158245B04B7007E5EF2 /* RegisterViewController.swift */,
-				6A70007F245746FA008A3314 /* CountryDetailsViewController.swift */,
-				6AA55ED22452FA3F003585EA /* Covid19API.swift */,
-				6AA55ED42454DD90003585EA /* Covid19Data.swift */,
-				F79818462459616300C0CC4A /* HomeScreenViewController.swift */,
-				6ABCA9C72459658E00BBE3AD /* SymptomsViewController.swift */,
-				F735B7D5245F0D4D009FD01C /* DebugViewController.swift */,
-				F7DFDC57246085A5008D0037 /* Person.swift */,
-				F7DFDC5924609A8E008D0037 /* Symptom.swift */,
 				6A7B73FC244853690096EE52 /* Assets.xcassets */,
 				6A7B7401244853690096EE52 /* Info.plist */,
 				6AD00FC6245FF658004D87DF /* Localizable.strings */,
 				6A7B73F9244853680096EE52 /* Covid_19App.xcdatamodeld */,
-				6A8533EE2463FC1800306D14 /* NSUIColor+HexValue.swift */,
 			);
 			path = "Covid-19App";
 			sourceTree = "<group>";
@@ -281,6 +258,77 @@
 				6A7B7417244853690096EE52 /* Info.plist */,
 			);
 			path = "Covid-19AppUITests";
+			sourceTree = "<group>";
+		};
+		6A8533F0246432ED00306D14 /* NewsTab */ = {
+			isa = PBXGroup;
+			children = (
+				F77A2A062456F4DF00280660 /* webViewController.swift */,
+				F70D746B2452B967006B7008 /* NewsTableViewController.swift */,
+				F70D74712452BA8A006B7008 /* NewsTableViewCell.swift */,
+				F70D746F2452BA1B006B7008 /* NewsData.swift */,
+				F79818622459BD0C00C0CC4A /* NewsArticle+CoreDataClass.swift */,
+				F70D746D2452B9C3006B7008 /* NewsDataFetcher.swift */,
+				F79818632459BD0C00C0CC4A /* NewsArticle+CoreDataProperties.swift */,
+			);
+			path = NewsTab;
+			sourceTree = "<group>";
+		};
+		6A8533F12464341000306D14 /* SymptomsTab */ = {
+			isa = PBXGroup;
+			children = (
+				F79818642459BD0C00C0CC4A /* Symptom+CoreDataClass.swift */,
+				F79818652459BD0C00C0CC4A /* Symptom+CoreDataProperties.swift */,
+				6ABCA9C72459658E00BBE3AD /* SymptomsViewController.swift */,
+				F7DFDC5924609A8E008D0037 /* Symptom.swift */,
+				F79818442459472000C0CC4A /* RecSymptomsTableViewCell.swift */,
+				F7981842245946F200C0CC4A /* RecSymptomsTableViewController.swift */,
+			);
+			path = SymptomsTab;
+			sourceTree = "<group>";
+		};
+		6A8533F2246434A300306D14 /* StatisticsTab */ = {
+			isa = PBXGroup;
+			children = (
+				6AA55ECC2452EBCC003585EA /* StatisticsTableViewController.swift */,
+				6AA55ED02452EDA3003585EA /* StatisticsTableViewCell.swift */,
+				6A70007F245746FA008A3314 /* CountryDetailsViewController.swift */,
+				6AA55ED22452FA3F003585EA /* Covid19API.swift */,
+				6AA55ED42454DD90003585EA /* Covid19Data.swift */,
+			);
+			path = StatisticsTab;
+			sourceTree = "<group>";
+		};
+		6A8533F32464352A00306D14 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				F79818462459616300C0CC4A /* HomeScreenViewController.swift */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		6A8533F42464356500306D14 /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				F7908660245C2D6A003A4F1E /* User+CoreDataProperties.swift */,
+				F79818662459BD0C00C0CC4A /* User+CoreDataClass.swift */,
+				F798183E2458BC0F00C0CC4A /* ProfileViewController.swift */,
+				F79818402458BCCE00C0CC4A /* LoginViewController.swift */,
+				F70AA158245B04B7007E5EF2 /* RegisterViewController.swift */,
+				F7CA779E245DB69500E10577 /* ChangeStatusViewController.swift */,
+				F78D9C50245F209C00961F40 /* UsersTableViewController.swift */,
+				F78D9C54245F25B400961F40 /* UsersTableViewCell.swift */,
+				F7DFDC57246085A5008D0037 /* Person.swift */,
+			);
+			path = ProfileTab;
+			sourceTree = "<group>";
+		};
+		6A8533F52464368C00306D14 /* DebugTab */ = {
+			isa = PBXGroup;
+			children = (
+				F735B7D5245F0D4D009FD01C /* DebugViewController.swift */,
+			);
+			path = DebugTab;
 			sourceTree = "<group>";
 		};
 		75A15AEE5D6AA92E7FACDA1F /* Pods */ = {
