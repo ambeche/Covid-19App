@@ -4,7 +4,10 @@
 //
 //  Created by iosdev on 26.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
-//
+
+//  Structs definining the covid+19 data fetched from server
+//  These structs conform to Codable protocol used for decoding with JSONDecoder()
+
 
 import Foundation
 
@@ -108,6 +111,7 @@ import Foundation
          }
      }
 
+// Struct for the golobal timeline Json data
      struct GlobalTimeline: Codable {
          var data: [Timeline]
          var _cacheHit: Bool

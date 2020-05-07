@@ -4,13 +4,14 @@
 //
 //  Created by iosdev on 24.4.2020.
 //  Copyright © 2020 Covid-19App. All rights reserved.
-//
+
+//  This class sets itself as a delegate to Covid19API, manipulates fetched data and dispaly them on a table view
+//  It provides search and sorting functionalities
 
 import UIKit
+import Charts
 
 class StatisticsTableViewController: UITableViewController, UISearchResultsUpdating, Covid19APIDelegate {
-   
-    
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
     }
@@ -39,7 +40,6 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
         super.viewDidLoad()
 
          self.clearsSelectionOnViewWillAppear = false
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         covid19Fetcher.url1 = apiUrl
         covid19Fetcher.covid19APIDelegate = self
@@ -82,6 +82,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
            else {
                stats = covidStatistics[indexPath.row]
            }
+        configureCells(cell)
         cell.countryName.text = stats.name
         cell.recovered.text = "\(stats.latest_data.recovered)"
         cell.fatalities.text = "\(stats.latest_data.deaths)"
@@ -113,7 +114,7 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
         return true
     }
 
-
+//  pass data to countryDetailsViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       guard
         segue.identifier == "ShowCountryDetails",
@@ -123,7 +124,8 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
           return
       }
       
-        var stats: Country
+//    provide the appropriate data to table view cells, filtered or unfiltered
+      var stats: Country
       if isfiltering(){
              stats = filteredCovidStatistics[indexPath.row]
          }
@@ -134,16 +136,26 @@ class StatisticsTableViewController: UITableViewController, UISearchResultsUpdat
       countryDetailsViewController.stats = stats
     }
     
+//  verifies the status of the search bar
     func isfiltering() -> Bool {
         return searchController.isActive && !checkSearchBarContent
     }
-    
+
+//  filters search results and reloads the table view
     func filterDataBySearchText (_ searchText: String){
         filteredCovidStatistics = covidStatistics.filter{ data -> Bool in
             return data.name.lowercased().contains(searchText.lowercased())
         }
       
         tableView.reloadData()
+    }
+    
+    func configureCells(_ cell: StatisticsTableViewCell) {
+        //cell.countryName.backgroundColor = NSUIColor(hex: 0xff9f0a)
+        cell.recovered.backgroundColor = NSUIColor(hex: 0x30d158)
+        cell.fatalities.backgroundColor = NSUIColor(hex: 0x3ff453a)
+        cell.infected.backgroundColor = NSUIColor(hex: 0xffd60a)
+        
     }
 
     func fetchedData(_ covid19Data: Covid19Data) {
