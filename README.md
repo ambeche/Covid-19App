@@ -1,5 +1,4 @@
 # Covid-19 App 
-## **[App Demo](https://restaux.herokuapp.com/)**
 ## **Implemented Features**
 *  ***Covid-19 Symptoms Checker***
 *  **Recent Covid-19 global statistics**
